@@ -23,7 +23,7 @@ public class Item {
     @Column(name = "model")
     private String model;
 
-    @Column(name = "serial number")
+    @Column(name = "serial_number")
     private int serialNumber;
 
     @Column(name = "year")

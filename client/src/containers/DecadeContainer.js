@@ -13,7 +13,7 @@ class DecadeContainer extends Component {
 
         return ( 
             <div>
-                <h1>Test</h1>
+                <h1>{this.props.decade}</h1>
                 {items}
             </div>
          );

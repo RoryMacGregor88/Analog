@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Route, Switch } from "react-router-dom";
+import DecadeContainer from "./DecadeContainer";
 
 class ContentContainer extends Component {
     constructor(props) {
@@ -30,7 +32,7 @@ class ContentContainer extends Component {
         });
 
         return (
-            <div>{names}</div>
+            <DecadeContainer />
         );
     }
 }

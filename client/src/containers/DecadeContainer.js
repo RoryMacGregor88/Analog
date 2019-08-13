@@ -6,8 +6,16 @@ class DecadeContainer extends Component {
         this.state = {  }
     }
     render() { 
+
+        const items = this.props.items.map((item) => {
+            return <h2 key={item.serialNumber}>{item.year} {item.brand} {item.model}</h2>
+        })
+
         return ( 
-            <h1>Hello</h1>
+            <div>
+                <h1>Test</h1>
+                {items}
+            </div>
          );
     }
 }

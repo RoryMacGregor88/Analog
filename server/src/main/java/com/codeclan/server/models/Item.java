@@ -1,9 +1,9 @@
-package com.codeclan.analog.Analog.Models;
+package com.codeclan.server.models;
 
 import javax.persistence.*;
 
-import com.codeclan.analog.Analog.Enums.Decade;
-import com.codeclan.analog.Analog.Enums.Type;
+import com.codeclan.server.enums.Decade;
+import com.codeclan.server.enums.Type;
 
 @Entity
 @Table(name="items")

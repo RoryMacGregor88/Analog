@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Card from "../components/Card";
 
 class DecadeContainer extends Component {
     constructor(props) {
@@ -7,14 +8,19 @@ class DecadeContainer extends Component {
     }
     render() { 
 
-        const items = this.props.items.map((item) => {
-            return <h2 key={item.serialNumber}>{item.year} {item.brand} {item.model}</h2>
+        const cards = this.props.items.map((item) => {
+            
+            return <Card 
+                        key={item.serialNumber}
+                        item={item}
+                        displayFunction={this.props.displayFunction}
+                    />
         })
 
         return ( 
             <div>
                 <h1>{this.props.decade}</h1>
-                {items}
+                {cards}
             </div>
          );
     }

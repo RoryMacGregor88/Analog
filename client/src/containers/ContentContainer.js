@@ -2,15 +2,19 @@ import React, { Component } from 'react';
 import { Route, Switch } from "react-router-dom";
 import DecadeContainer from "./DecadeContainer";
 import HomeContainer from "./HomeContainer";
-import NavBar from "../components/NavBar";
+import BigCard from "../components/BigCard";
 
 class ContentContainer extends Component {
     constructor(props) {
         super(props);
         this.state = { 
+            showCard: false,
+            selectedItem: null,
             items: []
          }
+    this.showCard = this.showCard.bind(this);
     this.splitDecades = this.splitDecades.bind(this);
+    this.handleBackClick = this.handleBackClick.bind(this);
     }
 
     componentDidMount() {
@@ -36,54 +40,69 @@ class ContentContainer extends Component {
                 result.push(items[i]);
             }
         }
-        
         return result;
     }
 
+    showCard(item) {
+        this.setState({
+            selectedItem: item,
+            showCard: !this.state.showCard
+        })
+    }
+
+    handleBackClick() {
+        this.setState({showCard: false})
+    }
+
     render() { 
-
+        if (this.state.showCard) {
+            
+            const item = this.state.selectedItem
+            return (
+                <BigCard
+                    item={item}
+                    key={item.serialNumber}
+                    backFunction={this.handleBackClick}
+                />
+            )
+        }
         return (
-            <div>
-                <NavBar />
-                <Switch>
-                    <Route exact path="/"
-                        render={
-                            () => <HomeContainer
-                                word="Home"
-                            />}
-                    />
-                    <Route exact path="/50s"
-                        render={
-                            () => <DecadeContainer
-                                decade={"'50s"}
-
-                                items={this.splitDecades("FIFTIES")}
-                            />}
-                    />
-                    <Route exact path="/60s"
-                        render={
-                            () => <DecadeContainer
-                                decade={"'60s"}
-
-                                items={this.splitDecades("SIXTIES")}
-                            />}
-                    />
-                    <Route exact path="/70s"
-                        render={
-                            () => <DecadeContainer
-                                decade={"'70s"}
-                                items={this.splitDecades("SEVENTIES")}
-                            />}
-                    />
-                    <Route exact path="/80s"
-                        render={
-                            () => <DecadeContainer
-                                decade={"'80s"}
-                                items={this.splitDecades("EIGHTIES")}
-                            />}
-                    />
-                </Switch>
-            </div>
+            <Switch>
+                <Route exact path="/"
+                    render={
+                        () => <HomeContainer
+                            word="Home"
+                        />}
+                />
+                <Route exact path="/50s"
+                    render={
+                        () => <DecadeContainer
+                            items={this.splitDecades("FIFTIES")}
+                            displayFunction={this.showCard}
+                        />}
+                />
+                <Route exact path="/60s"
+                    render={
+                        () => <DecadeContainer
+                            items={this.splitDecades("SIXTIES")}
+                            displayFunction={this.showCard}
+                        />}
+                />
+                <Route exact path="/70s"
+                    render={
+                        () => <DecadeContainer
+                            items={this.splitDecades("SEVENTIES")}
+                            displayFunction={this.showCard}
+                        />}
+                />
+                <Route exact path="/80s"
+                    render={
+                        () => <DecadeContainer
+                            items={this.splitDecades("EIGHTIES")}
+                            displayFunction={this.showCard}
+                        />}
+                />
+            </Switch>
         );
     }
 }

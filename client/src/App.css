@@ -3,3 +3,8 @@
     padding: 1em;
     color: red;
 }
+
+img {
+    width: 20em;
+    height: auto;
+}

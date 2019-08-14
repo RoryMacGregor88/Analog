@@ -56,12 +56,13 @@ class ContentContainer extends Component {
 
     render() { 
         if (this.state.showCard) {
-            
             const item = this.state.selectedItem
+            const text = "This is test text."
             return (
                 <BigCard
                     item={item}
                     key={item.serialNumber}
+                    text={text}
                     backFunction={this.handleBackClick}
                 />
             )
@@ -77,6 +78,7 @@ class ContentContainer extends Component {
                 <Route exact path="/50s"
                     render={
                         () => <DecadeContainer
+                            decade="1950s"
                             items={this.splitDecades("FIFTIES")}
                             displayFunction={this.showCard}
                         />}
@@ -84,6 +86,7 @@ class ContentContainer extends Component {
                 <Route exact path="/60s"
                     render={
                         () => <DecadeContainer
+                            decade="1960s"
                             items={this.splitDecades("SIXTIES")}
                             displayFunction={this.showCard}
                         />}
@@ -91,6 +94,7 @@ class ContentContainer extends Component {
                 <Route exact path="/70s"
                     render={
                         () => <DecadeContainer
+                            decade="1970s"
                             items={this.splitDecades("SEVENTIES")}
                             displayFunction={this.showCard}
                         />}
@@ -98,6 +102,7 @@ class ContentContainer extends Component {
                 <Route exact path="/80s"
                     render={
                         () => <DecadeContainer
+                            decade="1980s"
                             items={this.splitDecades("EIGHTIES")}
                             displayFunction={this.showCard}
                         />}

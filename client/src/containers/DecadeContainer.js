@@ -4,15 +4,17 @@ import Card from "../components/Card";
 class DecadeContainer extends Component {
     constructor(props) {
         super(props);
-        this.state = {  }
+        this.state = { 
+            text: null
+         }
     }
     render() { 
 
         const cards = this.props.items.map((item) => {
             
             return <Card 
-                        key={item.serialNumber}
-                        item={item}
+                        item={item}     
+                        key={item.serialNumber}                 
                         displayFunction={this.props.displayFunction}
                     />
         })

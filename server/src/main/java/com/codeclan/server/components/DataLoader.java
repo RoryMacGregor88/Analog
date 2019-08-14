@@ -21,34 +21,122 @@ public class DataLoader implements ApplicationRunner {
 
     public void run(ApplicationArguments args) {
 
-        Item stratocaster = new Item(Type.GUITAR, "Fender", "Stratocaster", 8935, 1956, Decade.FIFTIES, 25000);
+        Item stratocaster = new Item(
+                Type.GUITAR,
+                "Fender",
+                "Stratocaster",
+                8935,
+                1956,
+                Decade.FIFTIES,
+                25000,
+                "This is an original 1956 Fender Stratocaster, mint condition with all original parts."
+        );
         itemRepository.save(stratocaster);
 
-        Item superOverdrive = new Item(Type.PEDAL, "Boss", "Super Overdrive", 4729, 1982, Decade.EIGHTIES, 150);
+        Item superOverdrive = new Item(
+                Type.PEDAL,
+                "Boss",
+                "Super Overdrive",
+                4729,
+                1982,
+                Decade.EIGHTIES,
+                150,
+                "This is sample text"
+        );
         itemRepository.save(superOverdrive);
 
-        Item jcm800 = new Item(Type.AMPLIFIER, "Marshall", "JCM800", 4557, 1987, Decade.EIGHTIES, 1100);
+        Item jcm800 = new Item(
+                Type.AMPLIFIER,
+                "Marshall",
+                "JCM800",
+                4557,
+                1987,
+                Decade.EIGHTIES,
+                1100,
+                "This is sample text"
+        );
         itemRepository.save(jcm800);
 
-        Item juno60 = new Item(Type.SYNTHESIZER, "Roland", "Juno60", 5015, 1978, Decade.SEVENTIES, 3000);
+        Item juno60 = new Item(
+                Type.SYNTHESIZER,
+                "Roland",
+                "Juno60",
+                5015,
+                1978,
+                Decade.SEVENTIES,
+                3000,
+                "This is sample text"
+        );
         itemRepository.save(juno60);
 
-        Item dx7 = new Item(Type.SYNTHESIZER, "Yamaha", "DX7", 2019, 1978, Decade.EIGHTIES, 4000);
+        Item dx7 = new Item(Type.SYNTHESIZER,
+                "Yamaha",
+                "DX7",
+                2019,
+                1978,
+                Decade.EIGHTIES,
+                4000,
+                "This is sample text"
+        );
         itemRepository.save(dx7);
 
-        Item bigMuff = new Item(Type.PEDAL, "Electro Harmonix", "Big Muff", 9254, 1969, Decade.SIXTIES, 200);
+        Item bigMuff = new Item(
+                Type.PEDAL,
+                "Electro Harmonix",
+                "Big Muff",
+                9254,
+                1969,
+                Decade.SIXTIES,
+                200,
+                "This is sample text"
+        );
         itemRepository.save(bigMuff);
 
-        Item sm7 = new Item(Type.MICROPHONE, "Shure", "SM7", 1054, 1973, Decade.SEVENTIES, 350);
+        Item sm7 = new Item(Type.MICROPHONE,
+                "Shure",
+                "SM7",
+                1054,
+                1973,
+                Decade.SEVENTIES,
+                350,
+                "This is sample text"
+        );
         itemRepository.save(sm7);
 
-        Item jazzBass = new Item(Type.BASS, "Fender", "Jazz Bass", 8046, 1958, Decade.FIFTIES, 20000);
+        Item jazzBass = new Item(
+                Type.BASS,
+                "Fender",
+                "Jazz Bass",
+                8046,
+                1958,
+                Decade.FIFTIES,
+                20000,
+                "This is sample text"
+        );
         itemRepository.save(jazzBass);
 
-        Item la2a = new Item(Type.STUDIO, "Teletronix", "LA2A", 1738, 1955, Decade.FIFTIES, 12000);
+        Item la2a = new Item(
+                Type.STUDIO,
+                "Teletronix",
+                "LA2A",
+                1738,
+                1955,
+                Decade.FIFTIES,
+                12000,
+                "This is sample text"
+        );
         itemRepository.save(la2a);
 
-        Item isa110 = new Item(Type.STUDIO, "Focusrite", "ISA110", 2961, 1978, Decade.EIGHTIES, 3000);
+        Item isa110 = new Item(
+                Type.STUDIO,
+                "Focusrite",
+                "ISA110",
+                2961,
+                1978,
+                Decade.EIGHTIES,
+                3000,
+                "This is sample text"
+        );
         itemRepository.save(isa110);
     }
 }

@@ -15,9 +15,9 @@ public class ItemTest {
 
     @Before
     public void before() {
-        item1 = new Item(Type.GUITAR, "Fender", "Stratocaster", 8935, 1956, Decade.FIFTIES, 24999.99);
-        item2 = new Item(Type.AMPLIFIER, "Marshall", "JCM800", 4557, 1987, Decade.EIGHTIES, 999.99);
-        item3 = new Item(Type.SYNTHESIZER, "Roland", "Juno60", 5015, 1978, Decade.SEVENTIES, 2999.99);
+        item1 = new Item(Type.GUITAR, "Fender", "Stratocaster", 8935, 1956, Decade.FIFTIES, 24999.99, "This is sample text");
+        item2 = new Item(Type.AMPLIFIER, "Marshall", "JCM800", 4557, 1987, Decade.EIGHTIES, 999.99, "This is sample text");
+        item3 = new Item(Type.SYNTHESIZER, "Roland", "Juno60", 5015, 1978, Decade.SEVENTIES, 2999.99, "This is sample text");
     }
 
     @Test
@@ -53,5 +53,10 @@ public class ItemTest {
     @Test
     public void hasPrice() {
         assertEquals(2999.99, item3.getPrice(), 0.1);
+    }
+
+    @Test
+    public void hasDescription() {
+        assertEquals("This is sample text", item1.getDescription());
     }
 }

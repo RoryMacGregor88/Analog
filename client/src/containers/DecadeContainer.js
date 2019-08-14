@@ -7,11 +7,17 @@ class DecadeContainer extends Component {
         this.state = { 
             text: null
          }
+    this.handleOptionClick = this.handleOptionClick.bind(this);
     }
+
+    handleOptionClick(evt) {
+        alert("this works");
+        
+    }
+
     render() { 
 
         const cards = this.props.items.map((item) => {
-            
             return <Card 
                         item={item}     
                         key={item.serialNumber}                 
@@ -19,8 +25,15 @@ class DecadeContainer extends Component {
                     />
         })
 
+        const options = this.props.items.map((item) => {
+            return <option key={item.serialNumber}>{item.type}</option>
+        })
+
         return ( 
             <div>
+                <select onSelect={this.handleOptionClick}>
+                    {options}
+                </select>
                 <h1>{this.props.decade}</h1>
                 {cards}
             </div>

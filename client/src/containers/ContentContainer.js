@@ -51,7 +51,7 @@ class ContentContainer extends Component {
     }
 
     handleBackClick() {
-        this.setState({showCard: false})
+        this.setState({ showCard: !this.state.showCard})
     }
 
     render() { 

@@ -35,7 +35,10 @@ public class Item {
     @Column(name = "price")
     private double price;
 
-    public Item(Type type, String brand, String model, int serialNumber, int year, Decade decade, double price) {
+    @Column(columnDefinition = "TEXT")
+    private String description;
+
+    public Item(Type type, String brand, String model, int serialNumber, int year, Decade decade, double price, String description) {
         this.type = type;
         this.brand = brand;
         this.model = model;
@@ -43,6 +46,7 @@ public class Item {
         this.year = year;
         this.decade = decade;
         this.price = price;
+        this.description = description;
     }
 
     public Item() {
@@ -83,5 +87,9 @@ public class Item {
 
     public double getPrice() {
         return price;
+    }
+
+    public String getDescription(){
+        return description;
     }
 }

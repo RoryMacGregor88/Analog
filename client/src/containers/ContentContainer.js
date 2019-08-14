@@ -57,12 +57,10 @@ class ContentContainer extends Component {
     render() { 
         if (this.state.showCard) {
             const item = this.state.selectedItem
-            const text = "This is test text."
             return (
                 <BigCard
                     item={item}
                     key={item.serialNumber}
-                    text={text}
                     backFunction={this.handleBackClick}
                 />
             )

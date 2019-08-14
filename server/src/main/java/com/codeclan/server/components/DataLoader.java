@@ -29,7 +29,7 @@ public class DataLoader implements ApplicationRunner {
                 1956,
                 Decade.FIFTIES,
                 25000,
-                "This is an original 1956 Fender Stratocaster, mint condition with all original parts."
+                "This is an original 1956 Fender Stratocaster, in mint condition with all original parts."
         );
         itemRepository.save(stratocaster);
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import "../App.css";
 
 const Link = (props) => {
     return (

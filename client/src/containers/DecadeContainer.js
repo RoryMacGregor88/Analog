@@ -32,11 +32,16 @@ class DecadeContainer extends Component {
             <div>
                 <div className="filter-select-div">
                     <select onSelect={this.handleOptionClick}>
+                        <option>filter by type</option>
                         {options}
                     </select>
                 </div>
-                <h1>{this.props.decade}</h1>
-                {cards}
+                <h1 className="decade-h1">{this.props.decade}</h1>
+                <div className="cards-div">
+                    {cards}
+                    {cards}
+                    {cards}
+                </div>
             </div>
          );
     }

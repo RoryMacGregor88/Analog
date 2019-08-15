@@ -5,6 +5,7 @@
 
 .analog-h1 {
     text-align: center;
+    color: pink;
 }
 
 Nav {
@@ -26,10 +27,37 @@ Nav {
 }
 
 .filter-select-div {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5em;
 
     & select {
-        background-color: red;
+        background-color: pink;
+    }
+}
+
+.decade-h1 {
+    text-align: center;
+}
+
+.cards-div {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; 
+    margin: 1em 0 1em 0;
+}
+
+.card {
+    margin: 1em 0 1em 0;
+    text-align: center;
+    background-color: #fffaaa;
+    border: 3px solid black;
+    width: 20em;
+
+    & img {
+        width: 5em;
+        height: auto;
     }
 }
 

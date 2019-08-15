@@ -3,7 +3,8 @@
   padding: 0; }
 
 .analog-h1 {
-  text-align: center; }
+  text-align: center;
+  color: pink; }
 
 Nav {
   background-color: #fffaaa;
@@ -19,9 +20,31 @@ Nav {
     align-items: flex-end; }
 
 .filter-select-div {
-  text-align: center; }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5em; }
   .filter-select-div select {
-    background-color: red; }
+    background-color: pink; }
+
+.decade-h1 {
+  text-align: center; }
+
+.cards-div {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 1em 0 1em 0; }
+
+.card {
+  margin: 1em 0 1em 0;
+  text-align: center;
+  background-color: #fffaaa;
+  border: 3px solid black;
+  width: 20em; }
+  .card img {
+    width: 5em;
+    height: auto; }
 
 img {
   width: 20em;

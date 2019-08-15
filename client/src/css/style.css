@@ -48,3 +48,25 @@ Nav {
     height: auto; }
   .card .bottom-card-div {
     background-color: red; }
+
+.big-card-div {
+  display: flex;
+  height: 40em; }
+  .big-card-div img {
+    text-align: left;
+    height: 100%;
+    width: auto; }
+  .big-card-div .big-card {
+    background-color: #ffaccc;
+    text-align: center;
+    padding: 0 5em 0 5em; }
+    .big-card-div .big-card h1 {
+      font-size: 2.5em;
+      margin-top: 1em; }
+    .big-card-div .big-card p {
+      font-size: 1.5em;
+      margin-top: 1em; }
+    .big-card-div .big-card button {
+      padding: 1em;
+      font-size: 1.5em;
+      margin-top: 1em; }

@@ -7,13 +7,14 @@ class BigCard extends Component {
         const backFunction = this.props.backFunction;
 
         return (
-            <div>
-                <h1>{item.brand}</h1>
-                <img src={"/images/8935.jpg"} alt={item.model}/>
-                <p>{item.description}</p>
-                <button onClick={backFunction.bind(this)}>Back</button>
+            <div className="big-card-div">
+                <img src={"/images/8935.jpg"} alt={item.model} />
+                <div className="big-card">
+                    <h1>{item.brand}</h1>
+                    <p>{item.description} {item.description} {item.description} {item.description} {item.description} {item.description} {item.description} {item.description} {item.description} {item.description} {item.description} {item.description}</p>
+                    <button onClick={backFunction.bind(this)}>Back</button>
+                </div>
             </div>
-
         );
     }
 }

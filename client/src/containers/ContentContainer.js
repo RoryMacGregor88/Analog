@@ -76,15 +76,22 @@ class ContentContainer extends Component {
             postAd: !this.state.postAd
         }, 
         () => {
-            this.postNewAd();
+            this.postNewAd(formData);
         })
     }
 
-    postNewAd() {
+    createAdObject(formData) {
+        console.log("createAdObject works!");
+        console.log(formData);
+        
+        
+    }
+
+    postNewAd(formData) {
         const url = "http://localhost:8080/items";
 
-        const payload = this.createAdObject(this.state);
-        // console.log(payload);
+        const payload = this.createAdObject(formData);
+        console.log(payload);
 
         fetch(url, {
             method: "POST",

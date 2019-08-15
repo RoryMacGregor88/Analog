@@ -13,8 +13,7 @@ class Card extends Component {
                     <h1>{item.year}</h1>
                     <h2>{item.brand} {item.model}</h2>
                 </div>
-                <img src={
-                    item.type === "AMPLIFIER" ? "/images/8935.jpg" : "/images/sd1.jpg" } alt={item.model} />
+                <img src={item.type === "AMPLIFIER" ? "/images/8935.jpg" : "/images/sd1.jpg"} alt={item.model} />
                 <div className="bottom-card-div">
                     <h3>£{item.price}</h3>
                     <button onClick={displayFunction.bind(this, item)}>more details</button>

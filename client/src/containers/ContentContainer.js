@@ -9,10 +9,12 @@ class ContentContainer extends Component {
         super(props);
         this.state = { 
             showCard: false,
+            sold: false,
             selectedItem: null,
             items: []
          }
     this.showCard = this.showCard.bind(this);
+    this.sellItem = this.sellItem.bind(this);
     this.splitDecades = this.splitDecades.bind(this);
     this.handleBackClick = this.handleBackClick.bind(this);
     }
@@ -50,17 +52,28 @@ class ContentContainer extends Component {
         })
     }
 
+    sellItem() {
+        this.setState({
+            sold: !this.state.sold
+        })
+    }
+
     handleBackClick() {
         this.setState({ showCard: !this.state.showCard})
     }
 
     render() { 
         if (this.state.showCard) {
-            const item = this.state.selectedItem
+
+            const item = this.state.selectedItem;
+            const sold = this.state.sold;
+
             return (
                 <BigCard
-                    item={item}
                     key={item.serialNumber}
+                    item={item}
+                    sold={sold}
+                    soldFunction={this.sellItem}
                     backFunction={this.handleBackClick}
                 />
             )

@@ -30,7 +30,7 @@ class DecadeContainer extends Component {
                 <div className="search-filter-div">
                     <button onClick={this.props.postAd}>post an ad</button>
                     <select onSelect={this.handleOptionClick}>
-                        <option>filter by type</option>
+                        <option defaultValue>filter by type</option>
                         {options}
                     </select>
                     <input type="search" id="search" placeholder="search..."></input>

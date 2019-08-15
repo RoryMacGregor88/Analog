@@ -19,16 +19,17 @@ Nav {
     justify-content: space-around;
     align-items: flex-end; }
 
-.filter-select-div {
+.decade-h1 {
+  text-align: center; }
+
+.search-filter-div {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 5em; }
-  .filter-select-div select {
-    background-color: pink; }
-
-.decade-h1 {
-  text-align: center; }
+  margin: 1em 0 0 1.7em; }
+  .search-filter-div select {
+    background-color: pink;
+    margin-right: 2em; }
 
 .cards-div {
   display: flex;

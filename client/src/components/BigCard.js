@@ -4,7 +4,8 @@ class BigCard extends Component {
     render(props) {
 
         const item = this.props.item;
-        const backFunction = this.props.backFunction;
+        const goBack = this.props.goBack;
+        const sellItem = this.props.sellItem;
 
         return (
             <div className="big-card-div">
@@ -17,9 +18,9 @@ class BigCard extends Component {
                         {item.description} {item.description} {item.description} {item.description} {item.description} {item.description} {item.description} {item.description} {item.description} {item.description} {item.description} {item.description}
                     </p>
 
-                    <button onClick={this.props.soldFunction.bind(this)}>buy now</button>
+                    <button onClick={sellItem.bind(this)}>buy now</button>
                     <br></br>
-                    <button onClick={backFunction.bind(this)}>Back</button>
+                    <button onClick={goBack.bind(this)}>Back</button>
                     {this.props.sold && <h1>SOLD</h1>}
                 </div>
             </div>

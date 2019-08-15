@@ -26,19 +26,20 @@ Nav {
     }
 }
 
-.filter-select-div {
+ .decade-h1 {
+    text-align: center;
+}
+
+.search-filter-div {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 5em;
+    margin: 1em 0 0 1.7em;
 
     & select {
         background-color: pink;
+        margin-right: 2em;
     }
-}
-
-.decade-h1 {
-    text-align: center;
 }
 
 .cards-div {

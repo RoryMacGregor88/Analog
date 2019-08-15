@@ -73,8 +73,8 @@ class ContentContainer extends Component {
                     key={item.serialNumber}
                     item={item}
                     sold={sold}
-                    soldFunction={this.sellItem}
-                    backFunction={this.handleBackClick}
+                    sellItem={this.sellItem}
+                    goBack={this.handleBackClick}
                 />
             )
         }

@@ -30,7 +30,9 @@ class DecadeContainer extends Component {
 
         return ( 
             <div>
-                <div className="filter-select-div">
+                <div className="search-filter-div">
+                    <input type="search" id="search" placeholder="search..."></input>
+                    <button htmlFor="search">search</button>
                     <select onSelect={this.handleOptionClick}>
                         <option>filter by type</option>
                         {options}

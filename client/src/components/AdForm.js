@@ -10,9 +10,11 @@ class AdForm extends Component {
             year: "",
             serialNumber: "",
             price: "",
-            description: ""
+            description: "",
+            decade: ""
          }
     this.yearSelect = this.yearSelect.bind(this);
+    this.assignDecade = this.assignDecade.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.change = this.change.bind(this);
     }
@@ -37,9 +39,18 @@ class AdForm extends Component {
     }
 
     change(evt) {
-        this.setState(
-            { [evt.target.name]: evt.target.value }
+        this.setState({ 
+            [evt.target.name]: evt.target.value 
+        },
+        () => {this.assignDecade(this.state.year)}
         );
+    }
+
+    assignDecade(year) {
+        return (year < 1960) ? this.setState({ decade: "FIFTIES" }) 
+        : (year >= 1960 && year < 1970) ? this.setState({decade: "SIXTIES"}) 
+        : (year >= 1970 && year < 1980) ? this.setState({ decade: "SEVENTIES" }) 
+        : (year > 1980) ? this.setState({ decade: "EIGHTIES" }) : "Invalid Year"
     }
 
     render() { 

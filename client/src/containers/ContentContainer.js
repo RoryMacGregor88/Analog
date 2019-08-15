@@ -15,9 +15,10 @@ class ContentContainer extends Component {
             selectedItem: null,
             items: []
          }
-    this.postAd = this.postAd.bind(this);
+    this.newAd = this.newAd.bind(this);
     this.showCard = this.showCard.bind(this);
     this.sellItem = this.sellItem.bind(this);
+    this.postNewAd = this.postNewAd.bind(this);
     this.splitDecades = this.splitDecades.bind(this);
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.handleFormBackClick = this.handleFormBackClick.bind(this);
@@ -57,7 +58,7 @@ class ContentContainer extends Component {
         })
     }
 
-    postAd() {
+    newAd() {
         this.setState({
             postAd: !this.state.postAd
         })
@@ -69,9 +70,33 @@ class ContentContainer extends Component {
         })
     }
 
-    handleFormSubmit(data) {
-        console.log(data);
+    handleFormSubmit(formData) {
+        this.setState({
+            items: [...this.state.items, formData],
+            postAd: !this.state.postAd
+        }, 
+        () => {
+            this.postNewAd();
+        })
     }
+
+    postNewAd() {
+        const url = "http://localhost:8080/items";
+
+        const payload = this.createAdObject(this.state);
+        // console.log(payload);
+
+        fetch(url, {
+            method: "POST",
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        })
+            .then(response => {
+                console.log(response);
+            })
+            .catch(err => console.log(err));
+    }
+
 
     handleBigCardBackClick() {
         this.setState({ 
@@ -122,7 +147,7 @@ class ContentContainer extends Component {
                             decade="1950s"
                             items={this.splitDecades("FIFTIES")}
                             displayFunction={this.showCard}
-                            postAd={this.postAd}
+                            newAd={this.newAd}
                         />}
                 />
                 <Route exact path="/60s"
@@ -131,7 +156,7 @@ class ContentContainer extends Component {
                             decade="1960s"
                             items={this.splitDecades("SIXTIES")}
                             displayFunction={this.showCard}
-                            postAd={this.postAd}
+                            newAd={this.newAd}
                         />}
                 />
                 <Route exact path="/70s"
@@ -140,7 +165,7 @@ class ContentContainer extends Component {
                             decade="1970s"
                             items={this.splitDecades("SEVENTIES")}
                             displayFunction={this.showCard}
-                            postAd={this.postAd}
+                            newAd={this.newAd}
                         />}
                 />
                 <Route exact path="/80s"
@@ -149,7 +174,7 @@ class ContentContainer extends Component {
                             decade="1980s"
                             items={this.splitDecades("EIGHTIES")}
                             displayFunction={this.showCard}
-                            postAd={this.postAd}
+                            newAd={this.newAd}
                         />}
                 />
             </Switch>

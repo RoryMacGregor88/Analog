@@ -12,7 +12,6 @@ class DecadeContainer extends Component {
 
     handleOptionClick(evt) {
         alert("this works");
-        
     }
 
     render() { 
@@ -31,9 +30,11 @@ class DecadeContainer extends Component {
 
         return ( 
             <div>
-                <select onSelect={this.handleOptionClick}>
-                    {options}
-                </select>
+                <div className="filter-select-div">
+                    <select onSelect={this.handleOptionClick}>
+                        {options}
+                    </select>
+                </div>
                 <h1>{this.props.decade}</h1>
                 {cards}
             </div>

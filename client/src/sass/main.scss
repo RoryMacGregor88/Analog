@@ -1,7 +1,36 @@
-.link {
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.analog-h1 {
+    text-align: center;
+}
+
+Nav {
+    background-color: #fffaaa;
+    height: 5em;
+
+    & .link {
     text-decoration: none;
-    padding: 1em;
+    padding-bottom: 1em;
     color: red;
+    }
+
+    & .links-div {
+        height: 65%;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+    }
+}
+
+.filter-select-div {
+    text-align: center;
+
+    & select {
+        background-color: red;
+    }
 }
 
 img {

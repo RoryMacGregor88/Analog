@@ -1,7 +1,27 @@
-.link {
-  text-decoration: none;
-  padding: 1em;
-  color: red; }
+* {
+  margin: 0;
+  padding: 0; }
+
+.analog-h1 {
+  text-align: center; }
+
+Nav {
+  background-color: #fffaaa;
+  height: 5em; }
+  Nav .link {
+    text-decoration: none;
+    padding-bottom: 1em;
+    color: red; }
+  Nav .links-div {
+    height: 65%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end; }
+
+.filter-select-div {
+  text-align: center; }
+  .filter-select-div select {
+    background-color: red; }
 
 img {
   width: 20em;

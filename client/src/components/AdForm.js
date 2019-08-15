@@ -3,8 +3,23 @@ import React, { Component } from 'react';
 class AdForm extends Component {
     constructor(props) {
         super(props);
-        this.state = {  }
+        this.state = { 
+            type: "",
+            brand: "",
+            model: "",
+            year: "",
+            serialNumber: "",
+            price: "",
+            description: ""
+         }
     this.yearSelect = this.yearSelect.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.change = this.change.bind(this);
+    }
+
+    handleSubmit(evt) {
+        evt.preventDefault();
+        this.props.handleFormSubmit(this.state);
     }
 
     yearSelect() {
@@ -19,6 +34,12 @@ class AdForm extends Component {
         })
         
         return optionYears;
+    }
+
+    change(evt) {
+        this.setState(
+            { [evt.target.name]: evt.target.value }
+        );
     }
 
     render() { 
@@ -37,23 +58,77 @@ class AdForm extends Component {
         ]
 
         return ( 
-            <div>
-                <h1>item details</h1>
-                <form>
-                    <select required>
-                        {options}
-                    </select>
-                    <input type="text" placeholder="brand" required></input>
-                    <input type="text" placeholder="model" required></input>
-                    <select required>
-                        <option defaultValue>year</option>
-                        {this.yearSelect()}
-                    </select>
-                    <input type="text" placeholder="serial number" maxLength="4" pattern="\d{4}" required/>
-                    <input type="text" placeholder="price" required></input>
-                    <textarea placeholder="description..." maxLength="250" required></textarea>
-                    <input type="submit" value="post ad"></input>
-                </form>
+            <div className="form-content-div">
+                <h1 className="form-h1">item details</h1>
+
+                <div className="form-div">
+                    <form onSubmit={this.handleSubmit}>
+                        <select 
+                            name="type" 
+                            required
+                            onChange={evt => this.change(evt)}
+                        >
+                            {options}
+                        </select>
+
+                        <input 
+                            name="brand" 
+                            type="text" 
+                            placeholder="brand" 
+                            required
+                            onChange={evt => this.change(evt)}
+                        />
+
+                        <input 
+                            name="model" 
+                            type="text" 
+                            placeholder="model" 
+                            required
+                            onChange={evt => this.change(evt)}
+                        />
+
+                        <select 
+                            name="year" 
+                            required
+                            onChange={evt => this.change(evt)}
+                        >
+                            <option defaultValue>year</option>
+                            {this.yearSelect()}
+                        </select>
+
+                        <input 
+                            name="serialNumber" 
+                            type="text" 
+                            placeholder="serial number" 
+                            maxLength="4" 
+                            pattern="\d{4}" 
+                            required
+                            onChange={evt => this.change(evt)} 
+                        />
+                        
+                        <input 
+                            name="price"
+                            type="text" 
+                            placeholder="price" 
+                            required
+                            onChange={evt => this.change(evt)}
+                        />
+                        
+                        <textarea 
+                            name="description"
+                            placeholder="description..." 
+                            maxLength="250" 
+                            required
+                            onChange={evt => this.change(evt)}
+                        />
+                        
+                        <input 
+                            type="submit" 
+                            value="post ad"
+                        />
+                    </form>
+                </div>
+
                 <button onClick={goBack}>go back</button>
             </div>
          );

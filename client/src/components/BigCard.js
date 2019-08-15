@@ -19,7 +19,6 @@ class BigCard extends Component {
                     </p>
 
                     <button onClick={sellItem.bind(this)}>buy now</button>
-                    <br></br>
                     <button onClick={goBack.bind(this)}>Back</button>
                     {this.props.sold && <h1>SOLD</h1>}
                 </div>

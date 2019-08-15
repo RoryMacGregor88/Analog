@@ -19,6 +19,7 @@ class ContentContainer extends Component {
     this.showCard = this.showCard.bind(this);
     this.sellItem = this.sellItem.bind(this);
     this.splitDecades = this.splitDecades.bind(this);
+    this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.handleFormBackClick = this.handleFormBackClick.bind(this);
     this.handleBigCardBackClick = this.handleBigCardBackClick.bind(this);
     }
@@ -68,6 +69,10 @@ class ContentContainer extends Component {
         })
     }
 
+    handleFormSubmit(data) {
+        console.log(data);
+    }
+
     handleBigCardBackClick() {
         this.setState({ 
             showCard: !this.state.showCard
@@ -99,6 +104,7 @@ class ContentContainer extends Component {
             return (
                 <AdForm 
                     goBack={this.handleFormBackClick}
+                    handleFormSubmit={this.handleFormSubmit}
                 />
             )
         }

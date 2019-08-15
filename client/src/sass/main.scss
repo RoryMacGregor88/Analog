@@ -36,7 +36,8 @@ Nav {
     align-items: center;
     margin: 1em 0 0 1.7em;
 
-    & select {
+    & select,
+    button {
         background-color: pink;
         margin-right: 2em;
     }

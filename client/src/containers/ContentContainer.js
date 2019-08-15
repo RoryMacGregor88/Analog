@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import DecadeContainer from "./DecadeContainer";
 import HomeContainer from "./HomeContainer";
 import BigCard from "../components/BigCard";
+import AdForm from "../components/AdForm";
 
 class ContentContainer extends Component {
     constructor(props) {
@@ -10,13 +11,16 @@ class ContentContainer extends Component {
         this.state = { 
             showCard: false,
             sold: false,
+            postAd: false,
             selectedItem: null,
             items: []
          }
+    this.postAd = this.postAd.bind(this);
     this.showCard = this.showCard.bind(this);
     this.sellItem = this.sellItem.bind(this);
     this.splitDecades = this.splitDecades.bind(this);
-    this.handleBackClick = this.handleBackClick.bind(this);
+    this.handleFormBackClick = this.handleFormBackClick.bind(this);
+    this.handleBigCardBackClick = this.handleBigCardBackClick.bind(this);
     }
 
     componentDidMount() {
@@ -52,14 +56,28 @@ class ContentContainer extends Component {
         })
     }
 
+    postAd() {
+        this.setState({
+            postAd: !this.state.postAd
+        })
+    }
+
     sellItem() {
         this.setState({
             sold: !this.state.sold
         })
     }
 
-    handleBackClick() {
-        this.setState({ showCard: !this.state.showCard})
+    handleBigCardBackClick() {
+        this.setState({ 
+            showCard: !this.state.showCard
+        })
+    }
+
+    handleFormBackClick() {
+        this.setState({
+            postAd: !this.state.postAd
+        })
     }
 
     render() { 
@@ -74,7 +92,13 @@ class ContentContainer extends Component {
                     item={item}
                     sold={sold}
                     sellItem={this.sellItem}
-                    goBack={this.handleBackClick}
+                    goBack={this.handleBigCardBackClick}
+                />
+            )
+        } else if (this.state.postAd) {
+            return (
+                <AdForm 
+                    goBack={this.handleFormBackClick}
                 />
             )
         }
@@ -92,6 +116,7 @@ class ContentContainer extends Component {
                             decade="1950s"
                             items={this.splitDecades("FIFTIES")}
                             displayFunction={this.showCard}
+                            postAd={this.postAd}
                         />}
                 />
                 <Route exact path="/60s"
@@ -100,6 +125,7 @@ class ContentContainer extends Component {
                             decade="1960s"
                             items={this.splitDecades("SIXTIES")}
                             displayFunction={this.showCard}
+                            postAd={this.postAd}
                         />}
                 />
                 <Route exact path="/70s"
@@ -108,6 +134,7 @@ class ContentContainer extends Component {
                             decade="1970s"
                             items={this.splitDecades("SEVENTIES")}
                             displayFunction={this.showCard}
+                            postAd={this.postAd}
                         />}
                 />
                 <Route exact path="/80s"
@@ -116,6 +143,7 @@ class ContentContainer extends Component {
                             decade="1980s"
                             items={this.splitDecades("EIGHTIES")}
                             displayFunction={this.showCard}
+                            postAd={this.postAd}
                         />}
                 />
             </Switch>

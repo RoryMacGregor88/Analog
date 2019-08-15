@@ -1,3 +1,4 @@
+import com.codeclan.server.repositories.ItemRepository;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -8,6 +9,8 @@ import com.codeclan.server.enums.Type;
 import com.codeclan.server.models.Item;
 
 public class ItemTest {
+
+    ItemRepository itemRepository;
 
     Item item1;
     Item item2;

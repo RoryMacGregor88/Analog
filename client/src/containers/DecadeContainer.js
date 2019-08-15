@@ -4,9 +4,6 @@ import Card from "../components/Card";
 class DecadeContainer extends Component {
     constructor(props) {
         super(props);
-        this.state = { 
-            text: null
-         }
     this.handleOptionClick = this.handleOptionClick.bind(this);
     }
 
@@ -31,12 +28,13 @@ class DecadeContainer extends Component {
         return ( 
             <div>
                 <div className="search-filter-div">
-                    <input type="search" id="search" placeholder="search..."></input>
-                    <button htmlFor="search">search</button>
+                    <button onClick={this.props.postAd}>post an ad</button>
                     <select onSelect={this.handleOptionClick}>
                         <option>filter by type</option>
                         {options}
                     </select>
+                    <input type="search" id="search" placeholder="search..."></input>
+                    <button htmlFor="search">search</button>
                 </div>
                 <h1 className="decade-h1">{this.props.decade}</h1>
                 <div className="cards-div">

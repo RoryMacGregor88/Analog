@@ -27,7 +27,8 @@ Nav {
   justify-content: center;
   align-items: center;
   margin: 1em 0 0 1.7em; }
-  .search-filter-div select {
+  .search-filter-div select,
+  .search-filter-div button {
     background-color: pink;
     margin-right: 2em; }
 

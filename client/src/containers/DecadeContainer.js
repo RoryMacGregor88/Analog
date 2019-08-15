@@ -16,13 +16,13 @@ class DecadeContainer extends Component {
         const cards = this.props.items.map((item) => {
             return <Card 
                         item={item}     
-                        key={item.serialNumber}                 
+                        key={item.id}                 
                         displayFunction={this.props.displayFunction}
                     />
         })
 
         const options = this.props.items.map((item) => {
-            return <option key={item.serialNumber}>{item.type}</option>
+            return <option key={item.id}>{item.type}</option>
         })
 
         return ( 

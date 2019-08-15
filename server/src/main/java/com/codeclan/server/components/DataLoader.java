@@ -73,7 +73,7 @@ public class DataLoader implements ApplicationRunner {
                 "Yamaha",
                 "DX7",
                 2019,
-                1978,
+                1988,
                 Decade.EIGHTIES,
                 4000,
                 "This is sample text"

@@ -33,7 +33,7 @@ class ContentContainer extends Component {
             .then((data) => {
                 
                 this.setState({
-                    items: data._embedded.items
+                    items: data
                 })
             })
             .catch(err => console.log(err));
@@ -80,11 +80,18 @@ class ContentContainer extends Component {
         })
     }
 
-    createAdObject(formData) {
-        console.log("createAdObject works!");
-        console.log(formData);
-        
-        
+    createAdObject(data) {
+        const itemObject = {
+            "type": data.type,
+            "brand": data.brand,
+            "model": data.model,
+            "serialNumber": data.serialNumber,
+            "year": data.year,
+            "decade": data.decade,
+            "price": data.price,
+            "description": data.description 
+        }
+        return itemObject;
     }
 
     postNewAd(formData) {
@@ -125,7 +132,7 @@ class ContentContainer extends Component {
 
             return (
                 <BigCard
-                    key={item.serialNumber}
+                    key={item.id}
                     item={item}
                     sold={sold}
                     sellItem={this.sellItem}

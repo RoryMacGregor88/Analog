@@ -33,19 +33,18 @@ Nav {
 .cards-div {
   display: flex;
   justify-content: space-evenly;
-  flex-wrap: wrap;
-  margin: 1em 0 1em 0; }
+  flex-wrap: wrap; }
 
 .card {
   margin: 1em 0 1em 0;
   text-align: center;
-  background-color: #fffaaa;
+  background-color: red;
   border: 3px solid black;
-  width: 20em; }
+  width: 17.5em; }
+  .card .top-card-div {
+    background-color: red; }
   .card img {
-    width: 5em;
+    width: 100%;
     height: auto; }
-
-img {
-  width: 20em;
-  height: auto; }
+  .card .bottom-card-div {
+    background-color: red; }

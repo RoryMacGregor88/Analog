@@ -9,7 +9,7 @@ class BigCard extends Component {
         return (
             <div>
                 <h1>{item.brand}</h1>
-                <img src={"/images/"+item.serialNumber+".jpg"} alt={item.model}/>
+                <img src={"/images/8935.jpg"} alt={item.model}/>
                 <p>{item.description}</p>
                 <button onClick={backFunction.bind(this)}>Back</button>
             </div>

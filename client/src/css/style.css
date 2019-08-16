@@ -24,8 +24,8 @@ Nav {
 
 .search-filter-div {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
+  align-content: center;
   margin: 1em 0 0 1.7em; }
   .search-filter-div select,
   .search-filter-div button {

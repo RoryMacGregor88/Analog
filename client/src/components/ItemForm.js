@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class AdForm extends Component {
+class ItemForm extends Component {
     constructor(props) {
         super(props);
         this.state = { 
@@ -13,10 +13,10 @@ class AdForm extends Component {
             description: "",
             decade: ""
          }
+    this.change = this.change.bind(this);     
     this.yearSelect = this.yearSelect.bind(this);
     this.assignDecade = this.assignDecade.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.change = this.change.bind(this);
     }
 
     handleSubmit(evt) {
@@ -47,10 +47,15 @@ class AdForm extends Component {
     }
 
     assignDecade(year) {
-        return (year < 1960) ? this.setState({ decade: "FIFTIES" }) 
-        : (year >= 1960 && year < 1970) ? this.setState({decade: "SIXTIES"}) 
-        : (year >= 1970 && year < 1980) ? this.setState({ decade: "SEVENTIES" }) 
-        : (year > 1980) ? this.setState({ decade: "EIGHTIES" }) : "Invalid Year"
+        return (year < 1960) ? 
+            this.setState({ decade: "FIFTIES" }) 
+        : (year >= 1960 && year < 1970) ? 
+            this.setState({decade: "SIXTIES"}) 
+        : (year >= 1970 && year < 1980) ? 
+            this.setState({ decade: "SEVENTIES" }) 
+        : (year > 1980) ? 
+            this.setState({ decade: "EIGHTIES" }) 
+        : "Invalid Year"
     }
 
     render() { 
@@ -146,4 +151,4 @@ class AdForm extends Component {
     }
 }
  
-export default AdForm;
+export default ItemForm;

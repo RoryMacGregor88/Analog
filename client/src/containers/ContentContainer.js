@@ -3,23 +3,24 @@ import { Route, Switch } from "react-router-dom";
 import DecadeContainer from "./DecadeContainer";
 import HomeContainer from "./HomeContainer";
 import BigCard from "../components/BigCard";
-import AdForm from "../components/AdForm";
+import ItemForm from "../components/ItemForm";
 
 class ContentContainer extends Component {
     constructor(props) {
         super(props);
         this.state = { 
-            showCard: false,
+            bigCard: false,
             sold: false,
-            postAd: false,
+            itemForm: false,
             selectedItem: null,
             items: []
          }
-    this.newAd = this.newAd.bind(this);
-    this.showCard = this.showCard.bind(this);
+    this.bigCard = this.bigCard.bind(this);
+    this.itemForm = this.itemForm.bind(this);
     this.sellItem = this.sellItem.bind(this);
-    this.postNewAd = this.postNewAd.bind(this);
+    this.postNewItem = this.postNewItem.bind(this);
     this.splitDecades = this.splitDecades.bind(this);
+    this.createItemObject = this.createItemObject.bind(this);
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.handleFormBackClick = this.handleFormBackClick.bind(this);
     this.handleBigCardBackClick = this.handleBigCardBackClick.bind(this);
@@ -51,16 +52,16 @@ class ContentContainer extends Component {
         return result;
     }
 
-    showCard(item) {
+    bigCard(item) {
         this.setState({
             selectedItem: item,
-            showCard: !this.state.showCard
+            bigCard: !this.state.bigCard
         })
     }
 
-    newAd() {
+    itemForm() {
         this.setState({
-            postAd: !this.state.postAd
+            itemForm: !this.state.itemForm
         })
     }
 
@@ -73,14 +74,14 @@ class ContentContainer extends Component {
     handleFormSubmit(formData) {
         this.setState({
             items: [...this.state.items, formData],
-            postAd: !this.state.postAd
+            itemForm: !this.state.itemForm
         }, 
         () => {
-            this.postNewAd(formData);
+            this.postNewItem(formData);
         })
     }
 
-    createAdObject(data) {
+    createItemObject(data) {
         const itemObject = {
             "type": data.type,
             "brand": data.brand,
@@ -94,10 +95,10 @@ class ContentContainer extends Component {
         return itemObject;
     }
 
-    postNewAd(formData) {
+    postNewItem(formData) {
         const url = "http://localhost:8080/items";
 
-        const payload = this.createAdObject(formData);
+        const payload = this.createItemObject(formData);
         console.log(payload);
 
         fetch(url, {
@@ -114,18 +115,18 @@ class ContentContainer extends Component {
 
     handleBigCardBackClick() {
         this.setState({ 
-            showCard: !this.state.showCard
+            bigCard: !this.state.bigCard
         })
     }
 
     handleFormBackClick() {
         this.setState({
-            postAd: !this.state.postAd
+            itemForm: !this.state.itemForm
         })
     }
 
     render() { 
-        if (this.state.showCard) {
+        if (this.state.bigCard) {
 
             const item = this.state.selectedItem;
             const sold = this.state.sold;
@@ -139,9 +140,9 @@ class ContentContainer extends Component {
                     goBack={this.handleBigCardBackClick}
                 />
             )
-        } else if (this.state.postAd) {
+        } else if (this.state.itemForm) {
             return (
-                <AdForm 
+                <ItemForm 
                     goBack={this.handleFormBackClick}
                     handleFormSubmit={this.handleFormSubmit}
                 />
@@ -160,8 +161,8 @@ class ContentContainer extends Component {
                         () => <DecadeContainer
                             decade="1950s"
                             items={this.splitDecades("FIFTIES")}
-                            displayFunction={this.showCard}
-                            newAd={this.newAd}
+                            displayFunction={this.bigCard}
+                            itemForm={this.itemForm}
                         />}
                 />
                 <Route exact path="/60s"
@@ -169,8 +170,8 @@ class ContentContainer extends Component {
                         () => <DecadeContainer
                             decade="1960s"
                             items={this.splitDecades("SIXTIES")}
-                            displayFunction={this.showCard}
-                            newAd={this.newAd}
+                            displayFunction={this.bigCard}
+                            itemForm={this.itemForm}
                         />}
                 />
                 <Route exact path="/70s"
@@ -178,8 +179,8 @@ class ContentContainer extends Component {
                         () => <DecadeContainer
                             decade="1970s"
                             items={this.splitDecades("SEVENTIES")}
-                            displayFunction={this.showCard}
-                            newAd={this.newAd}
+                            displayFunction={this.bigCard}
+                            itemForm={this.itemForm}
                         />}
                 />
                 <Route exact path="/80s"
@@ -187,8 +188,8 @@ class ContentContainer extends Component {
                         () => <DecadeContainer
                             decade="1980s"
                             items={this.splitDecades("EIGHTIES")}
-                            displayFunction={this.showCard}
-                            newAd={this.newAd}
+                            displayFunction={this.bigCard}
+                            itemForm={this.itemForm}
                         />}
                 />
             </Switch>

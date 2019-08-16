@@ -9,18 +9,18 @@ class BigCard extends Component {
 
         return (
             <div className="big-card-div">
-                <img src={"/images/8935.jpg"} alt={item.model} />
-                <div className="big-card">
-                    <h1>{item.year}</h1>
-                    <h3>{item.brand} {item.model}</h3>
+                <img className="big-card-img" src={"/images/8935.jpg"} alt={item.model} />
+                <div className="big-card-layout">
+                    <h1 className="big-card-h1">{item.year}</h1>
+                    <h3 className="big-card-h3">{item.brand} {item.model}</h3>
 
-                    <p>
+                    <p className="big-card-p">
                         {item.description} {item.description} {item.description} {item.description} {item.description} {item.description} {item.description} {item.description} {item.description} {item.description} {item.description} {item.description}
                     </p>
 
-                    <button onClick={sellItem.bind(this)}>buy now</button>
-                    <button onClick={goBack.bind(this)}>Back</button>
-                    {this.props.sold && <span class="stamp sold">sold</span>}
+                    <button className="big-card-btn" onClick={sellItem.bind(this)}>buy now</button>
+                    <button className="big-card-btn" onClick={goBack.bind(this)}>Back</button>
+                    {this.props.sold && <span className="stamp sold">sold</span>}
                 </div>
             </div>
         );

@@ -32,7 +32,6 @@ class ContentContainer extends Component {
         fetch(url)
             .then(res => res.json())
             .then((data) => {
-                
                 this.setState({
                     items: data._embedded.items
                 })
@@ -71,34 +70,34 @@ class ContentContainer extends Component {
         })
     }
 
-    handleFormSubmit(formData) {
+    handleFormSubmit(object) {
         this.setState({
-            items: [...this.state.items, formData],
+            items: [...this.state.items, object],
             itemForm: !this.state.itemForm
         }, 
         () => {
-            this.postNewItem(formData);
+            this.postNewItem(object);
         })
     }
 
-    createItemObject(data) {
-        const itemObject = {
-            "type": data.type,
-            "brand": data.brand,
-            "model": data.model,
-            "serialNumber": data.serialNumber,
-            "year": data.year,
-            "decade": data.decade,
-            "price": data.price,
-            "description": data.description 
+    createItemObject(object) {
+        const itemJson = {
+            "type": object.type,
+            "brand": object.brand,
+            "model": object.model,
+            "serialNumber": object.serialNumber,
+            "year": object.year,
+            "decade": object.decade,
+            "price": object.price,
+            "description": object.description 
         }
-        return itemObject;
+        return itemJson;
     }
 
-    postNewItem(formData) {
+    postNewItem(object) {
         const url = "http://localhost:8080/items";
 
-        const payload = this.createItemObject(formData);
+        const payload = this.createItemObject(object);
         console.log(payload);
 
         fetch(url, {

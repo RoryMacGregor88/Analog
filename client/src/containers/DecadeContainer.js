@@ -27,17 +27,17 @@ class DecadeContainer extends Component {
 
         return ( 
             <div>
-                <div className="search-filter-div">
-                    <button onClick={this.props.itemForm}>post an ad</button>
-                    <select onSelect={this.handleOptionClick}>
+                <div className="user-input-div">
+                    <button className="user-input-button" onClick={this.props.itemForm}>post an ad</button>
+                    <select className="user-input-select" onSelect={this.handleOptionClick}>
                         <option defaultValue>filter by type</option>
                         {options}
                     </select>
                     <input type="search" id="search" placeholder="search..."></input>
-                    <button htmlFor="search">search</button>
+                    <button className="user-input-button" htmlFor="search">search</button>
                 </div>
-                <h1 className="decade-h1">{this.props.decade}</h1>
-                <div className="cards-div">
+                <h1 className="card-decade-h1">{this.props.decade}</h1>
+                <div className="card-div">
                     {cards}
                     {cards}
                     {cards}

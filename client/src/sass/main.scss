@@ -10,22 +10,22 @@ $sixtiesRed: #c31e1e;
     padding: 0;
 }
 
-.analog-h1 {
-    text-align: center;
-    color: pink;
-}
-
-Nav {
+.nav {
     background-color: #fffaaa;
     height: 5em;
 
-    & .link {
+    &-h1 {
+    text-align: center;
+    color: pink;
+    }
+
+    &-link {
     text-decoration: none;
     padding-bottom: 1em;
     color: red;
     }
 
-    & .links-div {
+    &-links-div {
         height: 65%;
         display: flex;
         justify-content: space-around;
@@ -33,28 +33,21 @@ Nav {
     }
 }
 
-.decade-h1 {
-    text-align: center;
-}
+.user-input {
 
-.search-filter-div {
+    &-div {
     display: flex;
     justify-content: space-around;
     align-content: center;
     margin: 1em 0 0 1.7em;
+    }
 
-    & select,
-    button {
+    &-button,
+    &-select {
         background-color: pink;
         margin-right: 2em;
     }
-}
-
-.cards-div {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap; 
-}
+}   
 
 .card {
     margin: 1em 0 1em 0;
@@ -64,68 +57,95 @@ Nav {
     box-shadow: 7px 10px 12px -5px rgba(0, 0, 0, 0.56); 
     width: 17.5em;
 
-    & .top-card-div {
+    &-decade-h1 {
+    text-align: center;
+    }
+
+    &-div {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; 
+    }
+
+    &-top-div {
         background-color: red;
     }
 
-    & img {
+    &-img {
         width: 100%;
         height: auto;
     }
 
-     & .bottom-card-div {
+     &-bottom-div {
         background-color: red;
+    }
+
+    &-btn{
+        padding: 0.25em;
+        font-size: 1em;
+        margin: 0.5em 0 0.5em 0;
     }
 }
 
-.big-card-div {
-    display: flex;
-    height: 40em;
+.big-card {
 
-        & img {
+    &-div {
+        display: flex;
+        height: 40em; 
+    }
+
+    &-img {
         text-align: left;
         height: 100%;
         width: auto;
-        }
+    }
 
-        & .big-card {
-            background-color: #ffaccc;
-            text-align: center;
-            padding: 0 5em 0 5em;
+    &-layout {
+        background-color: #ffaccc;
+        text-align: center;
+        padding: 0 5em 0 5em;
+    }
 
-            & h1 {
-                font-size: 2.5em;
-                margin-top:1em;
-            }
+    &-h1 {
+        font-size: 2.5em;
+        margin-top:1em;
+    }        
 
-            & p {
-                font-size: 1.5em;
-                margin-top:1em;
-            }
+    &-h3 {
+        font-size: 2.5em;
+        margin-top:1em;
+    }
 
-            & button {
-                padding: 1em;
-                font-size: 1.5em;
-                margin-top:1em;
-            }
-        }
+    &-p {
+        font-size: 1.5em;
+        margin-top:1em;
+    }
 
+    &-btn {
+        padding: 1em;
+        font-size: 1.5em;
+        margin-top:1em;
+    }
 }
 
-.form-content-div {
-    background-color: grey;
+.form {
 
-    & .form-div {
+    &-content-div {
+    background-color: grey;
+    }
+
+    &-div {
         display: flex;
         flex-direction: column;
         align-content: center;
         background-color: red;
     }
+
 }
 
 .stamp {
-  transform: rotate(12deg);
-	color: #555;
+    transform: rotate(12deg);
+    color: #555;
 	font-size: 3rem;
 	font-weight: 700;
 	border: 0.25rem solid #555;
@@ -140,9 +160,9 @@ Nav {
 }
 
 .sold {
-  color: #D23;
-  border: 0.5rem double #D23;
-  transform: rotate(8deg);
-  -webkit-mask-position: 2rem 3rem;
-  font-size: 2rem;  
+    color: #D23;
+    border: 0.5rem double #D23;
+    transform: rotate(8deg);
+    -webkit-mask-position: 2rem 3rem;
+    font-size: 2rem;  
 }

@@ -2,40 +2,31 @@
   margin: 0;
   padding: 0; }
 
-.analog-h1 {
-  text-align: center;
-  color: pink; }
-
-Nav {
+.nav {
   background-color: #fffaaa;
   height: 5em; }
-  Nav .link {
+  .nav-h1 {
+    text-align: center;
+    color: pink; }
+  .nav-link {
     text-decoration: none;
     padding-bottom: 1em;
     color: red; }
-  Nav .links-div {
+  .nav-links-div {
     height: 65%;
     display: flex;
     justify-content: space-around;
     align-items: flex-end; }
 
-.decade-h1 {
-  text-align: center; }
-
-.search-filter-div {
+.user-input-div {
   display: flex;
   justify-content: space-around;
   align-content: center;
   margin: 1em 0 0 1.7em; }
-  .search-filter-div select,
-  .search-filter-div button {
-    background-color: pink;
-    margin-right: 2em; }
 
-.cards-div {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap; }
+.user-input-button, .user-input-select {
+  background-color: pink;
+  margin-right: 2em; }
 
 .card {
   margin: 1em 0 1em 0;
@@ -44,43 +35,63 @@ Nav {
   border: 3px solid black;
   box-shadow: 7px 10px 12px -5px rgba(0, 0, 0, 0.56);
   width: 17.5em; }
-  .card .top-card-div {
+  .card-decade-h1 {
+    text-align: center; }
+  .card-div {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; }
+  .card-top-div {
     background-color: red; }
-  .card img {
+  .card-img {
     width: 100%;
     height: auto; }
-  .card .bottom-card-div {
+  .card-bottom-div {
     background-color: red; }
+  .card-btn {
+    padding: 0.25em;
+    font-size: 1em;
+    margin: 0.5em 0 0.5em 0; }
 
 .big-card-div {
   display: flex;
   height: 40em; }
-  .big-card-div img {
-    text-align: left;
-    height: 100%;
-    width: auto; }
-  .big-card-div .big-card {
-    background-color: #ffaccc;
-    text-align: center;
-    padding: 0 5em 0 5em; }
-    .big-card-div .big-card h1 {
-      font-size: 2.5em;
-      margin-top: 1em; }
-    .big-card-div .big-card p {
-      font-size: 1.5em;
-      margin-top: 1em; }
-    .big-card-div .big-card button {
-      padding: 1em;
-      font-size: 1.5em;
-      margin-top: 1em; }
+
+.big-card-img {
+  text-align: left;
+  height: 100%;
+  width: auto; }
+
+.big-card-layout {
+  background-color: #ffaccc;
+  text-align: center;
+  padding: 0 5em 0 5em; }
+
+.big-card-h1 {
+  font-size: 2.5em;
+  margin-top: 1em; }
+
+.big-card-h3 {
+  font-size: 2.5em;
+  margin-top: 1em; }
+
+.big-card-p {
+  font-size: 1.5em;
+  margin-top: 1em; }
+
+.big-card-btn {
+  padding: 1em;
+  font-size: 1.5em;
+  margin-top: 1em; }
 
 .form-content-div {
   background-color: grey; }
-  .form-content-div .form-div {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    background-color: red; }
+
+.form-div {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background-color: red; }
 
 .stamp {
   transform: rotate(12deg);

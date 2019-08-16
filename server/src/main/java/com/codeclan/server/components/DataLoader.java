@@ -133,7 +133,7 @@ public class DataLoader implements ApplicationRunner {
                 "ISA110",
                 2961,
                 1978,
-                Decade.EIGHTIES,
+                Decade.SEVENTIES,
                 3000,
                 "This is sample text"
         );

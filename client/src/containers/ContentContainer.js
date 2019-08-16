@@ -33,7 +33,7 @@ class ContentContainer extends Component {
             .then((data) => {
                 
                 this.setState({
-                    items: data
+                    items: data._embedded.items
                 })
             })
             .catch(err => console.log(err));

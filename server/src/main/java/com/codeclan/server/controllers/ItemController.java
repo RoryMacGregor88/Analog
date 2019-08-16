@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping(value = "/items")
 public class ItemController {
@@ -17,8 +18,7 @@ public class ItemController {
     @Autowired
     ItemRepository itemRepository;
 
-    @GetMapping
-    @CrossOrigin(origins = "*")
+    @GetMapping(value = "/items")
     public List<Item> getAllItem() {
         return itemRepository.findAll();
     }

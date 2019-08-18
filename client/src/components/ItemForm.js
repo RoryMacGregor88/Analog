@@ -41,8 +41,8 @@ class ItemForm extends Component {
     change(evt) {
         this.setState({ 
             [evt.target.name]: evt.target.value 
-        },
-        () => {this.assignDecade(this.state.year)}
+        },() => 
+            {this.assignDecade(this.state.year)}
         );
     }
 
@@ -82,7 +82,7 @@ class ItemForm extends Component {
                         <select 
                             name="type" 
                             required
-                            onChange={evt => this.change(evt)}
+                            onChange={(evt) => this.change(evt)}
                         >
                             {options}
                         </select>
@@ -92,7 +92,7 @@ class ItemForm extends Component {
                             type="text" 
                             placeholder="brand" 
                             required
-                            onChange={evt => this.change(evt)}
+                            onChange={(evt) => this.change(evt)}
                         />
 
                         <input 
@@ -100,13 +100,13 @@ class ItemForm extends Component {
                             type="text" 
                             placeholder="model" 
                             required
-                            onChange={evt => this.change(evt)}
+                            onChange={(evt) => this.change(evt)}
                         />
 
                         <select 
                             name="year" 
                             required
-                            onChange={evt => this.change(evt)}
+                            onChange={(evt) => this.change(evt)}
                         >
                             <option defaultValue>year</option>
                             {this.yearSelect()}
@@ -119,7 +119,7 @@ class ItemForm extends Component {
                             maxLength="4" 
                             pattern="\d{4}" 
                             required
-                            onChange={evt => this.change(evt)} 
+                            onChange={(evt) => this.change(evt)} 
                         />
                         
                         <input 
@@ -127,7 +127,7 @@ class ItemForm extends Component {
                             type="text" 
                             placeholder="price" 
                             required
-                            onChange={evt => this.change(evt)}
+                            onChange={(evt) => this.change(evt)}
                         />
                         
                         <textarea 
@@ -135,7 +135,7 @@ class ItemForm extends Component {
                             placeholder="description..." 
                             maxLength="250" 
                             required
-                            onChange={evt => this.change(evt)}
+                            onChange={(evt) => this.change(evt)}
                         />
                         
                         <input 

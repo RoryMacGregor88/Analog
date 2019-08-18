@@ -11,18 +11,18 @@ $sixtiesRed: #c31e1e;
 }
 
 .nav {
-    background-color: #fffaaa;
+    background-color: $sixtiesYellow;
     height: 5em;
 
     &-h1 {
     text-align: center;
-    color: pink;
+    color: pin$sixtiesPurple;
     }
 
     &-link {
     text-decoration: none;
     padding-bottom: 1em;
-    color: red;
+    color: $sixtiesPurple;
     }
 
     &-links-div {
@@ -44,7 +44,7 @@ $sixtiesRed: #c31e1e;
 
     &-button,
     &-select {
-        background-color: pink;
+        background-color: $sixtiesPurple;
         margin-right: 2em;
     }
 }   
@@ -52,8 +52,9 @@ $sixtiesRed: #c31e1e;
 .card {
     margin: 1em 0 1em 0;
     text-align: center;
-    background-color: red;
-    border: 3px solid black;
+    border-radius: 10px;
+    background-color: $sixtiesYellow;
+    border: 3px solid $sixtiesOrange;
     box-shadow: 7px 10px 12px -5px rgba(0, 0, 0, 0.56); 
     width: 17.5em;
 
@@ -68,7 +69,8 @@ $sixtiesRed: #c31e1e;
     }
 
     &-top-div {
-        background-color: red;
+        background-color: $sixtiesGreen;
+        border-radius: 10px;
     }
 
     &-img {
@@ -77,7 +79,8 @@ $sixtiesRed: #c31e1e;
     }
 
      &-bottom-div {
-        background-color: red;
+        background-color: $sixtiesGreen;
+        border-radius: 10px;
     }
 
     &-btn{
@@ -101,7 +104,7 @@ $sixtiesRed: #c31e1e;
     }
 
     &-layout {
-        background-color: #ffaccc;
+        background-color: $sixtiesYellow;
         text-align: center;
         padding: 0 5em 0 5em;
     }
@@ -138,7 +141,7 @@ $sixtiesRed: #c31e1e;
         display: flex;
         flex-direction: column;
         align-content: center;
-        background-color: red;
+        background-color: $sixtiesYellow;
     }
 }
 

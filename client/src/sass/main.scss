@@ -36,10 +36,11 @@ $sixtiesRed: #c31e1e;
 .user-input {
 
     &-div {
-    display: flex;
-    justify-content: space-around;
-    align-content: center;
-    margin: 1em 0 0 1.7em;
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        margin: 1em 0 0 1.7em;
+        background-color: $sixtiesOrange;
     }
 
     &-button,
@@ -66,6 +67,7 @@ $sixtiesRed: #c31e1e;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap; 
+    background-color: $sixtiesYellow;
     }
 
     &-top-div {

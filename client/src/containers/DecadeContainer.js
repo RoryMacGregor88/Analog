@@ -41,7 +41,7 @@ class DecadeContainer extends Component {
 
     reset() {
         this.setState({
-            filter: !this.state.filter
+            filter: false
         })
     }
 
@@ -65,7 +65,7 @@ class DecadeContainer extends Component {
 
                     <button className="user-input-button" onClick={this.props.itemForm}>post an ad</button>
 
-                    <div clasName="user-input-filter">
+                    <div className="user-input-filter">
                         <select onChange={this.handleOptionClick} className="user-input-select">
                             <option defaultValue>filter by type</option>
                             {options}

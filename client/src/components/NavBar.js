@@ -6,15 +6,18 @@ const NavBar = (props) => {
     return (
         <nav className="nav">
 
-            <h1 class="vectro">
-                <span class="vectro-body">ANALOG</span>
-                <span class="vectro-red">I</span>
-                <span class="vectro-green">I</span>
-                <span class="vectro-blue">I</span>
-            </h1>
+            <div>
+                <h1 className="vectro">
+                    {/* must make logo "home" clickable */}
+                    <span className="vectro-body">ANALOG</span>
+                    <span className="vectro-red">I</span>
+                    <span className="vectro-green">I</span>
+                    <span className="vectro-blue">I</span>
+                </h1>
+                <h4 className="vectro vectro-h4">VINTAGE GEAR MARKETPLACE</h4>
+            </div>
 
             <div className="nav-links-div">
-                <Link text="home" href="/" />
                 <Link text="50s" href="/50s" />
                 <Link text="60s" href="/60s" />
                 <Link text="70s" href="/70s" />

@@ -1,22 +1,26 @@
-$fadedBlack: #111;
+$fadedBlack: #1f1f1f;
+$fadedWhite: #f1f1f1;
 
 * {
     margin: 0;
     padding: 0;
 }
 
+html {
+    background-color: $fadedBlack;
+    font-family: 'Righteous';
+}
+
 .nav {
+    display: flex;
     background-color: $fadedBlack;
     height: 5em;
-
-    &-h1 {
-        text-align: center;
-    }
+    margin-left: 2em;
 
     &-link {
         text-decoration: none;
         padding-bottom: 1em;
-        color: purple;
+        color: $fadedWhite;
     }
 
     &-links-div {
@@ -24,7 +28,8 @@ $fadedBlack: #111;
         width: 100%;
         display: flex;
         justify-content: space-around;
-        align-items: flex-end;
+        align-items: center;
+        padding-top: 1em;
     }
 }
 
@@ -32,17 +37,16 @@ $fadedBlack: #111;
 
     &-div {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-content: center;
-        margin: 1em 0 0 1.7em;
         background-color: $fadedBlack;
+        margin: 1.25em 2em 0 2em;
     }
 
     &-button,
     &-select {
-        background-color: white;
+        background-color: $fadedWhite;
         color: $fadedBlack;
-        margin-right: 2em;
     }
 }   
 
@@ -52,24 +56,23 @@ $fadedBlack: #111;
     text-align: center;
     border-radius: 10px;
     background-color: $fadedBlack;
-    border: 3px solid #F10C20;
-    box-shadow: 7px 10px 12px -5px rgba(0, 0, 0, 0.56); 
+    border: 3px solid $fadedWhite;
     width: 17.5em;
-    -webkit-text-fill-color: #6BFF2B;
+    -webkit-text-fill-color: $fadedWhite;
     -webkit-text-stroke: 0;
-    -webkit-filter: drop-shadow(2px 2px 15px #3F59F4);
+    -webkit-filter: drop-shadow(5px 5px 5px #3F59F4);
 
     &-decade-h1 {
         text-align: center;
         background-color: $fadedBlack;
-        color: red;
+        color: $fadedWhite;
     }
 
     &-div {
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap; 
-        background-color: #111;
+        background-color: $fadedBlack;
     }
 
     &-top-div {
@@ -126,22 +129,25 @@ $fadedBlack: #111;
     }
 
     &-layout {
-        background-color: $fadedBlack;
+        background-color: $fadedWhite;
         text-align: center;
         padding: 0 5em 0 5em;
     }
 
     &-h1 {
+        color: $fadedBlack;
         font-size: 2.5em;
         margin-top:1em;
     }        
 
     &-h3 {
+        color: $fadedBlack;
         font-size: 2.5em;
         margin-top:1em;
     }
 
     &-p {
+        color: $fadedBlack;
         font-size: 1.5em;
         margin-top:1em;
     }
@@ -194,9 +200,14 @@ $fadedBlack: #111;
 .vectro {
   position: relative;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 0.1px #f1f1f1;
+  -webkit-text-stroke: 0.1px $fadedWhite;
   font-family: 'Righteous', cursive;
   font-size: 60px;
+}
+
+.vectro-h4 {
+    font-size: 20px;
+    margin-top: -0.5em;
 }
 
 .vectro:after {

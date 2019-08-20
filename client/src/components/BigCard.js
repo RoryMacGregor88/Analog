@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 class BigCard extends Component {
-    render(props) {
+    render(props) { 
 
         const item = this.props.item;
         const goBack = this.props.goBack;
@@ -9,13 +9,13 @@ class BigCard extends Component {
 
         return (
             <div className="big-card-div">
-                <img className="big-card-img" src={"/images/8935.jpg"} alt={item.model} />
+                <img className="big-card-img" src={"/images/" + item.id + ".jpg"} alt={item.model} />
                 <div className="big-card-layout">
                     <h1 className="big-card-h1">{item.year}</h1>
                     <h3 className="big-card-h3">{item.brand} {item.model}</h3>
 
                     <p className="big-card-p">
-                        {item.description} {item.description} {item.description} {item.description} {item.description} {item.description} {item.description} {item.description} {item.description} {item.description} {item.description} {item.description}
+                        {item.description}
                     </p>
 
                     <button className="big-card-btn" onClick={sellItem.bind(this)}>buy now</button>

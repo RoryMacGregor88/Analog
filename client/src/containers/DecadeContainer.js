@@ -55,9 +55,11 @@ class DecadeContainer extends Component {
                     />
         })
 
-        const options = this.props.items.map((item) => {
-            return <option key={item.id}>{item.type}</option>
-        })
+        const options = [...new Set(
+            this.props.items.map((item) => {
+                return <option key={item.id}>{item.type}</option>;
+            })
+        )];
 
         return ( 
             <div>

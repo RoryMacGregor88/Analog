@@ -5,7 +5,14 @@ import "../css/style.css";
 const NavBar = (props) => {
     return (
         <nav className="nav">
-            <h1 className="nav-h1">ANALOG</h1>
+
+            <h1 class="vectro">
+                <span class="vectro-body">ANALOG</span>
+                <span class="vectro-red">I</span>
+                <span class="vectro-green">I</span>
+                <span class="vectro-blue">I</span>
+            </h1>
+
             <div className="nav-links-div">
                 <Link text="home" href="/" />
                 <Link text="50s" href="/50s" />

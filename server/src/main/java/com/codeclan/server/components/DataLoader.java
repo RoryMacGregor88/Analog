@@ -98,7 +98,8 @@ public class DataLoader implements ApplicationRunner {
                 1959,
                 Decade.FIFTIES,
                 16500,
-                "An all-original 1959 Jazz Bass, two-color-sunburst finish, one-piece maple neck and maintained to " +
+                "An all-original 1959 Precision Bass, two-color-sunburst finish, one-piece maple neck and maintained " +
+                        "to " +
                         "near-mint condition."
         );
         itemRepository.save(PBass);
@@ -166,7 +167,7 @@ public class DataLoader implements ApplicationRunner {
         Item isa110 = new Item(
                 Type.STUDIO,
                 "Focusrite",
-                "ISA110",
+                "ISA 110",
                 2961,
                 1978,
                 Decade.SEVENTIES,
@@ -211,7 +212,7 @@ public class DataLoader implements ApplicationRunner {
         Item jcm800 = new Item(
                 Type.AMPLIFIER,
                 "Marshall",
-                "JCM800",
+                "JCM 800",
                 4557,
                 1987,
                 Decade.EIGHTIES,

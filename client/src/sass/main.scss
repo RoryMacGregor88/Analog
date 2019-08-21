@@ -1,5 +1,8 @@
 $fadedBlack: #1f1f1f;
 $fadedWhite: #f1f1f1;
+$neonRed: #F10C20;
+$neonGreen: #6BFF2B;
+$neonBlue: #3F59F4;
 
 * {
     margin: 0;
@@ -37,16 +40,61 @@ html {
 
     &-div {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-content: center;
         background-color: $fadedBlack;
         margin: 1.25em 2em 0 2em;
+
+          & .post {
+            margin-left: 7.25em;
+          }
     }
 
-    &-button,
+    &-filter {
+        margin-left: 2em;
+    }
+
+    &-search-div {
+        margin-left: 2em;
+    }
+
+    &-btn, &-select, &-search {
+        background: $fadedWhite;
+        border-bottom: 3px inset rgba(0,0,0,.5);
+        border-left: 3px inset rgba(0,0,0,.5);
+        border-right: 3px inset rgba(255,255,255,.5);
+        border-top: 3px inset rgba(255,255,255,.5);
+        box-sizing: border-box;
+        border-radius: 5px;
+        color: $fadedWhite;
+        cursor: pointer;
+        font-size: 0.8rem;
+        padding: .5rem;
+        text-transform: uppercase;
+        background: $fadedBlack;
+            
+            &:focus,
+            &:hover {
+                background: $fadedWhite;
+                color: $fadedBlack;
+            }   
+        }
+
     &-select {
+        height: 3em;
+        margin-right: 1em;
+    }
+
+    &-search {
         background-color: $fadedWhite;
-        color: $fadedBlack;
+        width: 15.3em;
+        margin-right: 1em;
+
+        &:focus,
+        &:hover {
+            background: $fadedBlack;
+            color: $fadedWhite;
+        }   
     }
 }   
 
@@ -60,7 +108,7 @@ html {
     width: 17.5em;
     -webkit-text-fill-color: $fadedWhite;
     -webkit-text-stroke: 0;
-    -webkit-filter: drop-shadow(5px 5px 5px #3F59F4);
+    -webkit-filter: drop-shadow(5px 5px 5px $neonBlue);
 
     &-decade-h1 {
         text-align: center;
@@ -110,7 +158,9 @@ html {
         padding: 0 0.25em 0 0.25em;
         font-size: 1rem;
         margin: 0.25em 0 0.25em 0;
-        border-radius: 10px;
+        border-radius: 5px;
+        color: black;
+        background-color: $fadedBlack;
     }
 }
 
@@ -162,7 +212,7 @@ html {
 .form {
 
     &-content-div {
-    background-color: grey;
+    background-color: $fadedBlack;
     }
 
     &-div {
@@ -201,71 +251,69 @@ html {
   position: relative;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 0.1px $fadedWhite;
-  font-family: 'Righteous', cursive;
   font-size: 60px;
-}
 
-.vectro-h4 {
-    font-size: 20px;
-    margin-top: -0.5em;
-}
+    &-h4 {
+        font-size: 20px;
+        margin-top: -0.5em;
+    }
 
-.vectro:after {
-    text-align: center;
-    content: '';
-    // position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-animation:vectro_effect 0.067s infinite;
-    background: repeating-linear-gradient(0deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px, rgba(255,255,255,0) 1px, rgba(255,255,255,0) 2px);
+    &:after {
+        text-align: center;
+        content: '';
+        width: 100%;
+        height: 100%;
+        -webkit-animation:vectro_effect 0.067s infinite;
+        background: repeating-linear-gradient(0deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px, rgba(255,255,255,0) 1px, rgba(255,255,255,0) 2px);
+    }
+
+    &-body {
+        -webkit-background-clip: text;
+        background-image: -webkit-linear-gradient(#C3BFB4 0%, #FDFCFA 50%, #E8E7E5 51%, #757172 52%, #E8E9DB 100%);
+        -webkit-filter: drop-shadow(2px 2px 15px #3F59F4);
+    }
+
+    &-red {
+        color: $neonRed;
+        -webkit-text-fill-color: $neonRed;
+        -webkit-text-stroke: 0;
+        -webkit-filter: drop-shadow(2px 2px 15px $neonRed);
+        font-style: italic;
+        padding-right: 20px;
+    }
+
+    &-green {
+        color: $neonGreen;
+        -webkit-text-fill-color: $neonGreen;
+        -webkit-filter: drop-shadow(2px 2px 15px $neonGreen);
+        -webkit-text-stroke: 0;
+        font-style: italic;
+        padding-right: 20px;
+        margin-left: -20px;
+    }
+
+    &-blue {
+        color: $neonBlue;
+        -webkit-text-fill-color: $neonBlue;
+        -webkit-filter: drop-shadow(2px 2px 15px $neonBlue);
+        -webkit-text-stroke: 0;
+        font-style: italic;
+        padding-right: 20px;
+        margin-left: -20px;
+    }
 }
 
 .windows .vectro {
-  -webkit-text-stroke: 4px #f1f1f1;
-}
-
-.vectro-body {
-  -webkit-background-clip: text;
-  background-image: -webkit-linear-gradient(#C3BFB4 0%, #FDFCFA 50%, #E8E7E5 51%, #757172 52%, #E8E9DB 100%);
-  -webkit-filter: drop-shadow(2px 2px 15px #3F59F4);
-}
-
-.vectro-red {
-  color: #F10C20;
-  -webkit-text-fill-color: #F10C20;
-  -webkit-text-stroke: 0;
-  -webkit-filter: drop-shadow(2px 2px 15px #F10C20);
-  font-style: italic;
-  padding-right: 20px;
+  -webkit-text-stroke: 4px $fadedWhite;
 }
 
 .windows .vectro-red {
   padding-right: 30px;
 }
 
-.vectro-green {
-  color: #6BFF2B;
-  -webkit-text-fill-color: #6BFF2B;
-  -webkit-filter: drop-shadow(2px 2px 15px #6BFF2B);
-  -webkit-text-stroke: 0;
-  font-style: italic;
-  padding-right: 20px;
-  margin-left: -20px;
-}
-
 .windows .vectro-green {
   padding-right: 30px;
   margin-left: -30px;
-}
-
-.vectro-blue {
-  color: #3F59F4;
-  -webkit-text-fill-color: #3F59F4;
-  -webkit-filter: drop-shadow(2px 2px 15px #3F59F4);
-  -webkit-text-stroke: 0;
-  font-style: italic;
-  padding-right: 20px;
-  margin-left: -20px;
 }
 
 .windows .vectro-blue {

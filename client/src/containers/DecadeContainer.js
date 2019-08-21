@@ -22,9 +22,10 @@ class DecadeContainer extends Component {
     }
 
     filterItems(filteredType) {
+
         const filteredItems = this.props.items.filter((item) => {
             return item.type === filteredType;
-        });
+        })
 
         const filteredItemsCards = filteredItems.map((item) => {
             return <Card
@@ -32,7 +33,7 @@ class DecadeContainer extends Component {
                         key={item.id}
                         displayFunction={this.props.displayFunction}
                     />
-        });
+        })
         
         this.setState({
             filteredCards: filteredItemsCards
@@ -66,19 +67,19 @@ class DecadeContainer extends Component {
                 <div className="user-input-div">
                     <h1 className="card-decade-h1">{this.props.decade}</h1>
 
-                    <button className="user-input-button" onClick={this.props.itemForm}>post an ad</button>
+                    <button className="user-input-btn post" onClick={this.props.itemForm}>post an ad</button>
+
+                    <div className="user-input-search-div">
+                        <input className="user-input-search" type="search" id="search" placeholder="search..."></input>
+                        <button className="user-input-btn" htmlFor="search">search</button>
+                    </div>
 
                     <div className="user-input-filter">
                         <select onChange={this.handleOptionClick} className="user-input-select">
                             <option defaultValue>filter by type</option>
                             {options}
                         </select>
-                        <button className="user-input-button" onClick={this.reset}>reset filter</button>
-                    </div>
-
-                    <div className="user-input-search-div">
-                        <input className="user-input-search" type="search" id="search" placeholder="search..."></input>
-                        <button className="user-input-button" htmlFor="search">search</button>
+                        <button className="user-input-btn" onClick={this.reset}>reset filter</button>
                     </div>
                 </div>
 

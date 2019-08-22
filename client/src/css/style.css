@@ -15,6 +15,9 @@ html {
     text-decoration: none;
     padding-bottom: 1em;
     color: #f1f1f1; }
+    .nav-link:hover {
+      color: #F10C20;
+      text-decoration: underline; }
   .nav-links-div {
     background-color: #1f1f1f;
     width: 100%;
@@ -28,9 +31,7 @@ html {
   justify-content: flex-start;
   align-content: center;
   background-color: #1f1f1f;
-  margin: 1.25em 2em 0 2em; }
-  .user-input-div .post {
-    margin-left: 7.25em; }
+  margin: 1.25em 0 0 2em; }
 
 .user-input-filter {
   margin-left: 2em; }
@@ -48,8 +49,8 @@ html {
   border-radius: 5px;
   color: #f1f1f1;
   cursor: pointer;
-  font-size: 0.8rem;
-  padding: .5rem;
+  font-size: 0.5rem;
+  padding: .25rem;
   text-transform: uppercase;
   background: #1f1f1f; }
   .user-input-btn:focus, .user-input-btn:hover, .user-input-select:focus, .user-input-select:hover, .user-input-search:focus, .user-input-search:hover {
@@ -80,7 +81,8 @@ html {
   -webkit-text-stroke: 0;
   -webkit-filter: drop-shadow(5px 5px 5px #3F59F4); }
   .card-decade-h1 {
-    text-align: center;
+    text-align: left;
+    margin: 0.5em 0 0 1em;
     background-color: #1f1f1f;
     color: #f1f1f1; }
   .card-div {

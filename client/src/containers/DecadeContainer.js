@@ -64,9 +64,9 @@ class DecadeContainer extends Component {
 
         return ( 
             <div>
-                <div className="user-input-div">
-                    <h1 className="card-decade-h1">{this.props.decade}</h1>
 
+                <div className="user-input-div">
+        
                     <button className="user-input-btn post" onClick={this.props.itemForm}>post an ad</button>
 
                     <div className="user-input-search-div">
@@ -81,7 +81,10 @@ class DecadeContainer extends Component {
                         </select>
                         <button className="user-input-btn" onClick={this.reset}>reset filter</button>
                     </div>
+
                 </div>
+
+                <h1 className="card-decade-h1">{this.props.decade}</h1>
 
                 <div className="card-div">
                     {this.state.filter ? this.state.filteredCards : cards} 

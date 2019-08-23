@@ -74,78 +74,99 @@ class ItemForm extends Component {
         ]
 
         return ( 
-            <div className="form-content-div">
-                <h1 className="form-h1">item details</h1>
+            <div className="form-component">
+            
+                <h1 className="form-h1">post item</h1>
 
-                <div className="form-div">
-                    <form onSubmit={this.handleSubmit}>
-                        <select 
-                            name="type" 
-                            required
-                            onChange={(evt) => this.change(evt)}
-                        >
-                            {options}
-                        </select>
+                <div className="form-content-div">
+                    <form className="form-div" onSubmit={this.handleSubmit}>
 
-                        <input 
-                            name="brand" 
-                            type="text" 
-                            placeholder="brand" 
-                            required
-                            onChange={(evt) => this.change(evt)}
-                        />
+                       <div className="form-item-div">
+                            <select
+                                name="type"
+                                required
+                                onChange={(evt) => this.change(evt)}
+                            >
+                                {options}
+                            </select>
+                       </div>
 
-                        <input 
-                            name="model" 
-                            type="text" 
-                            placeholder="model" 
-                            required
-                            onChange={(evt) => this.change(evt)}
-                        />
+                        <div className="form-item-div">
+                            <input
+                                name="brand"
+                                type="text"
+                                placeholder="brand"
+                                required
+                                onChange={(evt) => this.change(evt)}
+                            />
+                        </div>
 
-                        <select 
-                            name="year" 
-                            required
-                            onChange={(evt) => this.change(evt)}
-                        >
-                            <option defaultValue>year</option>
-                            {this.yearSelect()}
-                        </select>
+                        <div className="form-item-div">
+                            <input
+                                name="model"
+                                type="text"
+                                placeholder="model"
+                                required
+                                onChange={(evt) => this.change(evt)}
+                            />
+                        </div>
 
-                        <input 
-                            name="serialNumber" 
-                            type="text" 
-                            placeholder="serial number" 
-                            maxLength="4" 
-                            pattern="\d{4}" 
-                            required
-                            onChange={(evt) => this.change(evt)} 
-                        />
+                       <div className="form-item-div">
+                            <select
+                                name="year"
+                                required
+                                onChange={(evt) => this.change(evt)}
+                            >
+                                <option defaultValue>year</option>
+                                {this.yearSelect()}
+                            </select>
+                       </div>
+
+                        <div className="form-item-div">
+                            <input
+                                name="serialNumber"
+                                type="text"
+                                placeholder="serial number"
+                                maxLength="4"
+                                pattern="\d{4}"
+                                required
+                                onChange={(evt) => this.change(evt)}
+                            />
+                        </div>
                         
-                        <input 
-                            name="price"
-                            type="text" 
-                            placeholder="price" 
-                            required
-                            onChange={(evt) => this.change(evt)}
-                        />
+                        <div className="form-item-div">
+                            <input
+                                name="price"
+                                type="text"
+                                placeholder="price"
+                                required
+                                onChange={(evt) => this.change(evt)}
+                            />
+                        </div>
                         
-                        <textarea 
-                            name="description"
-                            placeholder="description..." 
-                            maxLength="250" 
-                            required
-                            onChange={(evt) => this.change(evt)}
-                        />
+                        <div className="form-item-div">
+                            <textarea
+                                name="description"
+                                placeholder="description..."
+                                maxLength="250"
+                                required
+                                onChange={(evt) => this.change(evt)}
+                            />
+                        </div>
                         
-                        <input 
-                            type="submit" 
-                            value="post ad"
-                        />
+                       <div className="form-item-div">
+                            <input
+                                type="submit"
+                                value="post"
+                            />
+                       </div>
                     </form>
                 </div>
 
-                <button onClick={goBack}>go back</button>
+                <div className="form-btn-div">
+                    <button className="form-btn" onClick={goBack}>go back</button>
+                </div>
+
             </div>
          );
     }

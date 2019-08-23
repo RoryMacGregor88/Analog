@@ -168,14 +168,51 @@ html {
   font-size: 1.5em;
   margin-top: 1em; }
 
-.form-content-div {
+.form-component {
   background-color: #1F1F1F; }
 
-.form-div {
+.form-content-div {
   display: flex;
-  flex-direction: column;
-  align-content: center;
+  justify-content: center; }
+
+.form-item-div {
+  text-align: left;
+  margin: 1em 0 1em 0; }
+  .form-item-div input, .form-item-div select, .form-item-div textArea {
+    background: #F1F1F1;
+    border-bottom: 3px inset rgba(0, 0, 0, 0.5);
+    border-left: 3px inset rgba(0, 0, 0, 0.5);
+    border-right: 3px inset rgba(255, 255, 255, 0.5);
+    border-top: 3px inset rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-right: 1em;
+    color: #F1F1F1;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: .25rem;
+    text-transform: uppercase;
+    background: #1F1F1F; }
+    .form-item-div input:focus, .form-item-div input:hover, .form-item-div select:focus, .form-item-div select:hover, .form-item-div textArea:focus, .form-item-div textArea:hover {
+      background: #F1F1F1;
+      color: #1F1F1F; }
+
+.form-btn-div {
+  text-align: center; }
+
+.form-btn {
+  padding: 0.25em;
+  font-size: 1rem;
+  margin: 0.5em 0 0.25em 0;
+  width: 5em;
+  border-radius: 5px;
+  color: #F1F1F1;
   background-color: #1F1F1F; }
+
+.form-h1 {
+  text-align: center;
+  color: #F1F1F1;
+  margin: 1em 0 0.5em 0; }
 
 .stamp {
   transform: rotate(12deg);

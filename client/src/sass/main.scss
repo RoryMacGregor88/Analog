@@ -240,15 +240,61 @@ html {
 
 .form {
 
-    &-content-div {
-    background-color: $fadedBlack;
+    &-component {
+        background-color: $fadedBlack;
     }
 
-    &-div {
+    &-content-div {
         display: flex;
-        flex-direction: column;
-        align-content: center;
+        justify-content: center;
+    }
+
+    &-item-div {
+        text-align: left;
+        margin: 1em 0 1em 0;
+
+        & input, select, textArea {
+            background: $fadedWhite;
+            border-bottom: 3px inset rgba(0,0,0,.5);
+            border-left: 3px inset rgba(0,0,0,.5);
+            border-right: 3px inset rgba(255,255,255,.5);
+            border-top: 3px inset rgba(255,255,255,.5);
+            box-sizing: border-box;
+            border-radius: 5px;
+            margin-right: 1em;
+            color: $fadedWhite;
+            cursor: pointer;
+            font-size: 1rem;
+            padding: .25rem;
+            text-transform: uppercase;
+            background: $fadedBlack;
+                
+                &:focus,
+                &:hover {
+                    background: $fadedWhite;
+                    color: $fadedBlack;
+                }   
+        }
+    }
+
+    &-btn-div {
+        text-align: center;
+    }
+
+    &-btn{
+        padding: 0.25em;
+        font-size: 1rem;
+        margin: 0.5em 0 0.25em 0;
+        width: 5em;
+        border-radius: 5px;
+        color: $fadedWhite;
         background-color: $fadedBlack;
+    }   
+    
+    &-h1 {
+        text-align: center;
+        color: $fadedWhite;
+        margin: 1em 0 0.5em 0;
     }
 }
 

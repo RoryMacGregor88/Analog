@@ -10,3 +10,7 @@ Work-in-progress, live version coming soon.
 ![](client/public/images/analoghome.png)
 
 ![](client/public/images/analog.png)
+
+![](client/public/images/analogbigcard.png)
+
+![](client/public/images/analogform.png)

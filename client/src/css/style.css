@@ -32,7 +32,9 @@ html {
   text-align: center;
   margin-top: 10em; }
   .home .big {
-    font-size: 4em; }
+    font-size: 4em;
+    animation-name: title-fade-in;
+    animation-duration: 2.5s; }
 
 .user-input-div {
   display: flex;
@@ -90,7 +92,6 @@ html {
   background-color: #1F1F1F;
   border: 3px solid #F1F1F1;
   width: 17.5em;
-  -webkit-text-fill-color: #F1F1F1;
   -webkit-text-stroke: 0;
   -webkit-filter: drop-shadow(5px 5px 5px #3F59F4); }
   .card:hover {
@@ -111,9 +112,11 @@ html {
     background-color: #1F1F1F;
     border-radius: 7px 7px 0 0; }
     .card-top-div-h1 {
-      font-size: 1rem; }
+      font-size: 1rem;
+      color: #F1F1F1; }
     .card-top-div-h2 {
-      font-size: 1rem; }
+      font-size: 1rem;
+      color: #F1F1F1; }
   .card-img {
     object-fit: cover;
     width: 100%;
@@ -124,14 +127,19 @@ html {
     margin-top: -0.25em;
     border-radius: 0 0 7px 7px; }
     .card-bottom-div-h3 {
-      font-size: 1rem; }
+      font-size: 1rem;
+      color: #F1F1F1; }
   .card-btn {
-    padding: 0 0.25em 0 0.25em;
+    padding: 0 0.25em 0.1em 0.25em;
     font-size: 1rem;
-    margin: 0.25em 0 0.25em 0;
+    margin: 0.15em 0 0 0;
     border-radius: 5px;
-    color: black;
+    color: #F1F1F1;
     background-color: #1F1F1F; }
+    .card-btn:hover {
+      color: #1F1F1F;
+      background-color: #F1F1F1;
+      border: 2px solid #1F1F1F; }
 
 .big-card-div {
   display: flex;
@@ -193,21 +201,28 @@ html {
     padding: .25rem;
     text-transform: uppercase;
     background: #1F1F1F; }
+    .form-item-div input::placeholder, .form-item-div select::placeholder, .form-item-div textArea::placeholder {
+      color: #F1F1F1; }
     .form-item-div input:focus, .form-item-div input:hover, .form-item-div select:focus, .form-item-div select:hover, .form-item-div textArea:focus, .form-item-div textArea:hover {
       background: #F1F1F1;
       color: #1F1F1F; }
+      .form-item-div input:focus::placeholder, .form-item-div input:hover::placeholder, .form-item-div select:focus::placeholder, .form-item-div select:hover::placeholder, .form-item-div textArea:focus::placeholder, .form-item-div textArea:hover::placeholder {
+        color: #1F1F1F; }
 
 .form-btn-div {
   text-align: center; }
 
 .form-btn {
-  padding: 0.25em;
+  padding: 0 0.25em 0.15em 0.25em;
   font-size: 1rem;
-  margin: 0.5em 0 0.25em 0;
-  width: 5em;
+  margin: 0.15em 0 0 0;
   border-radius: 5px;
   color: #F1F1F1;
   background-color: #1F1F1F; }
+  .form-btn:hover {
+    color: #1F1F1F;
+    background-color: #F1F1F1;
+    border: 2px solid #1F1F1F; }
 
 .form-h1 {
   text-align: center;
@@ -292,3 +307,11 @@ html {
 .windows .vectro-blue {
   padding-right: 30px;
   margin-left: -30px; }
+
+@keyframes title-fade-in {
+  0% {
+    font-size: 2.25em; }
+  75% {
+    font-size: 4.25em; }
+  100% {
+    font-size: 4em; } }

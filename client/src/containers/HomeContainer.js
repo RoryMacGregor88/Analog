@@ -7,7 +7,14 @@ class HomeContainer extends Component {
     }
     render() { 
         return ( 
-            <h1>{this.props.word}</h1>
+            <div className="home">
+                <h1 className="vectro">
+                    <span className="vectro-body big">ANALOG</span>
+                    <span className="vectro-red big">I</span>
+                    <span className="vectro-green big">I</span>
+                    <span className="vectro-blue big">I</span>
+                </h1>
+            </div>
          );
     }
 }

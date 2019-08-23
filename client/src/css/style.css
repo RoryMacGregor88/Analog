@@ -26,6 +26,12 @@ html {
     align-items: center;
     padding-top: 1em; }
 
+.home {
+  text-align: center;
+  margin-top: 10em; }
+  .home .big {
+    font-size: 4em; }
+
 .user-input-div {
   display: flex;
   justify-content: flex-start;
@@ -130,7 +136,7 @@ html {
   object-fit: cover;
   text-align: left;
   height: 100%;
-  width: auto; }
+  width: 100%; }
 
 .big-card-layout {
   background-color: #f1f1f1;

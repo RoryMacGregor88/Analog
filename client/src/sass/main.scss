@@ -41,6 +41,15 @@ html {
     }
 }
 
+.home {
+    text-align: center;
+    margin-top: 10em;
+
+    & .big {
+        font-size: 4em;
+    }
+}
+
 .user-input {
 
     &-div {
@@ -186,7 +195,7 @@ html {
         object-fit: cover;
         text-align: left;
         height: 100%;
-        width: auto;
+        width: 100%;
     }
 
     &-layout {

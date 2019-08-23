@@ -9,7 +9,11 @@ class BigCard extends Component {
 
         return (
             <div className="big-card-div">
-                <img className="big-card-img" src={"/images/" + item.id + ".jpg"} alt={item.model} />
+
+                <div className="big-card-img-div">
+                    <img className="big-card-img" src={"/images/" + item.id + ".jpg"} alt={item.model} />
+                </div>
+
                 <div className="big-card-layout">
                     <h1 className="big-card-h1">{item.year}</h1>
                     <h3 className="big-card-h3">{item.brand} {item.model}</h3>

@@ -143,7 +143,7 @@ class DecadeContainer extends Component {
                             <option defaultValue>filter by type</option>
                             {options}
                         </select>
-                        <button className="user-input-btn" onClick={this.resetFilter}>reset filter</button>
+                        <button className="user-input-btn" onClick={this.resetFilter}>clear filter</button>
                     </div>
 
                 </div>

@@ -7,4 +7,6 @@ Built with frontend React/Sass, backend Java/Spring and fully test-driven.
 
 Work-in-progress, live version coming soon. 
 
+![](client/public/images/analoghome.png)
+
 ![](client/public/images/analog.png)

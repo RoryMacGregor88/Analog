@@ -34,7 +34,8 @@ html {
   .home .big {
     font-size: 4em;
     animation-name: title-fade-in;
-    animation-duration: 2.5s; }
+    animation-duration: 2.5s;
+    animation-timing-function: ease-in-out; }
 
 .user-input-div {
   display: flex;
@@ -152,29 +153,48 @@ html {
   width: 100%; }
 
 .big-card-layout {
-  background-color: #F1F1F1;
+  background-color: #1F1F1F;
   text-align: center;
   padding: 0 5em 0 5em; }
 
 .big-card-h1 {
-  color: #1F1F1F;
+  color: #F1F1F1;
   font-size: 2.5em;
   margin-top: 1em; }
 
 .big-card-h3 {
-  color: #1F1F1F;
+  color: #F1F1F1;
   font-size: 2.5em;
   margin-top: 1em; }
 
 .big-card-p {
-  color: #1F1F1F;
+  color: #F1F1F1;
   font-size: 1.5em;
   margin-top: 1em; }
 
+.big-card-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5em; }
+
+.big-card-btn-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 20%; }
+
 .big-card-btn {
-  padding: 1em;
-  font-size: 1.5em;
-  margin-top: 1em; }
+  padding: 0 0.25em 0.1em 0.25em;
+  border: 2px solid #F1F1F1;
+  font-size: 2rem;
+  margin: 1em 0 1em 0;
+  border-radius: 5px;
+  color: #F1F1F1;
+  background-color: #1F1F1F; }
+  .big-card-btn:hover {
+    color: #1F1F1F;
+    background-color: #F1F1F1;
+    border: 2px solid #1F1F1F; }
 
 .form-component {
   background-color: #1F1F1F; }

@@ -53,6 +53,7 @@ html {
         font-size: 4em;
         animation-name: title-fade-in;
         animation-duration: 2.5s;
+        animation-timing-function: ease-in-out;
     }
 }
 
@@ -218,33 +219,56 @@ html {
     }
 
     &-layout {
-        background-color: $fadedWhite;
+        background-color: $fadedBlack;
         text-align: center;
         padding: 0 5em 0 5em;
     }
 
     &-h1 {
-        color: $fadedBlack;
+        color: $fadedWhite;
         font-size: 2.5em;
         margin-top:1em;
     }        
 
     &-h3 {
-        color: $fadedBlack;
+        color: $fadedWhite;
         font-size: 2.5em;
         margin-top:1em;
     }
 
     &-p {
-        color: $fadedBlack;
+        color: $fadedWhite;
         font-size: 1.5em;
         margin-top:1em;
     }
 
+    &-btn-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 2.5em;
+    }
+
+    &-btn-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 20%;
+    }
+
     &-btn {
-        padding: 1em;
-        font-size: 1.5em;
-        margin-top:1em;
+        padding: 0 0.25em 0.1em 0.25em;
+        border: 2px solid $fadedWhite;
+        font-size: 2rem;
+        margin: 1em 0 1em 0;
+        border-radius: 5px;
+        color: $fadedWhite;
+        background-color: $fadedBlack;
+
+        &:hover {
+            color: $fadedBlack;
+            background-color: $fadedWhite;
+            border: 2px solid $fadedBlack;
+        }
     }
 }
 

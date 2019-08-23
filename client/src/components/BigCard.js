@@ -22,9 +22,14 @@ class BigCard extends Component {
                         {item.description}
                     </p>
 
-                    <button className="big-card-btn" onClick={sellItem.bind(this)}>buy now</button>
-                    <button className="big-card-btn" onClick={goBack.bind(this)}>Back</button>
-                    {this.props.sold && <span className="stamp sold">sold</span>}
+                    <div className="big-card-btn-wrapper">
+                        <div className="big-card-btn-div">
+                            <button className="big-card-btn" onClick={sellItem.bind(this)}>buy now</button>
+                            <button className="big-card-btn" onClick={goBack.bind(this)}>back</button>
+                        </div>
+                    </div>
+
+                   {this.props.sold && <span className="stamp sold">sold</span>}
                 </div>
             </div>
         );

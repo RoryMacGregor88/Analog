@@ -55,10 +55,10 @@ class DecadeContainer extends Component {
 
         let searchedCards = searchedItems.map((item) => {
             return <Card
-                item={item}
-                key={item.id}
-                displayFunction={this.props.displayFunction}
-            />
+                        item={item}
+                        key={item.id}
+                        displayFunction={this.props.displayFunction}
+                    />
         })
 
         this.setState({

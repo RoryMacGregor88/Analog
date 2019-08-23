@@ -3,23 +3,25 @@
   padding: 0; }
 
 html {
-  background-color: #1f1f1f;
+  background-color: #1F1F1F;
   font-family: 'Righteous'; }
 
 .nav {
   display: flex;
-  background-color: #1f1f1f;
+  background-color: #1F1F1F;
   height: 5em;
   margin-left: 2em; }
+  .nav-a {
+    text-decoration: none; }
   .nav-link {
     text-decoration: none;
     padding-bottom: 1em;
-    color: #f1f1f1; }
+    color: #F1F1F1; }
     .nav-link:hover {
       color: #F10C20;
       text-decoration: underline; }
   .nav-links-div {
-    background-color: #1f1f1f;
+    background-color: #1F1F1F;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -36,7 +38,7 @@ html {
   display: flex;
   justify-content: flex-start;
   align-content: center;
-  background-color: #1f1f1f;
+  background-color: #1F1F1F;
   margin: 1.25em 0 0 2em; }
 
 .user-input-filter {
@@ -46,7 +48,7 @@ html {
   margin-left: 2em; }
 
 .user-input-btn, .user-input-select, .user-input-search {
-  background: #f1f1f1;
+  background: #F1F1F1;
   border-bottom: 3px inset rgba(0, 0, 0, 0.5);
   border-left: 3px inset rgba(0, 0, 0, 0.5);
   border-right: 3px inset rgba(255, 255, 255, 0.5);
@@ -54,56 +56,59 @@ html {
   box-sizing: border-box;
   border-radius: 5px;
   margin-right: 1em;
-  color: #f1f1f1;
+  color: #F1F1F1;
   cursor: pointer;
   font-size: 0.5rem;
   padding: .25rem;
   text-transform: uppercase;
-  background: #1f1f1f; }
+  background: #1F1F1F; }
   .user-input-btn:focus, .user-input-btn:hover, .user-input-select:focus, .user-input-select:hover, .user-input-search:focus, .user-input-search:hover {
-    background: #f1f1f1;
-    color: #1f1f1f; }
+    background: #F1F1F1;
+    color: #1F1F1F; }
 
 .user-input-select {
   height: 3em;
   margin-right: 1em; }
 
 .user-input-search {
-  background-color: #f1f1f1;
+  background-color: #F1F1F1;
   width: 15.3em;
   margin-right: 1em; }
   .user-input-search::placeholder {
-    color: #1f1f1f; }
+    color: #1F1F1F; }
   .user-input-search:focus, .user-input-search:hover {
-    background: #1f1f1f;
-    color: #f1f1f1; }
+    background: #1F1F1F;
+    color: #F1F1F1; }
     .user-input-search:focus::placeholder, .user-input-search:hover::placeholder {
-      color: #f1f1f1; }
+      color: #F1F1F1; }
 
 .card {
   margin: 1em 0 1em 0;
   height: 20em;
   text-align: center;
   border-radius: 10px;
-  background-color: #1f1f1f;
-  border: 3px solid #f1f1f1;
+  background-color: #1F1F1F;
+  border: 3px solid #F1F1F1;
   width: 17.5em;
-  -webkit-text-fill-color: #f1f1f1;
+  -webkit-text-fill-color: #F1F1F1;
   -webkit-text-stroke: 0;
   -webkit-filter: drop-shadow(5px 5px 5px #3F59F4); }
+  .card:hover {
+    border: 3px solid #F10C20;
+    -webkit-filter: drop-shadow(5px 5px 5px #F1F1F1); }
   .card-decade-h1 {
     text-align: left;
     margin: 0.5em 0 0 1em;
-    background-color: #1f1f1f;
-    color: #f1f1f1; }
+    background-color: #1F1F1F;
+    color: #F1F1F1; }
   .card-div {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    background-color: #1f1f1f; }
+    background-color: #1F1F1F; }
   .card-top-div {
     height: 15%;
-    background-color: #1f1f1f;
+    background-color: #1F1F1F;
     border-radius: 7px 7px 0 0; }
     .card-top-div-h1 {
       font-size: 1rem; }
@@ -115,7 +120,7 @@ html {
     height: 70%; }
   .card-bottom-div {
     height: 15%;
-    background-color: #1f1f1f;
+    background-color: #1F1F1F;
     margin-top: -0.25em;
     border-radius: 0 0 7px 7px; }
     .card-bottom-div-h3 {
@@ -126,7 +131,7 @@ html {
     margin: 0.25em 0 0.25em 0;
     border-radius: 5px;
     color: black;
-    background-color: #1f1f1f; }
+    background-color: #1F1F1F; }
 
 .big-card-div {
   display: flex;
@@ -139,22 +144,22 @@ html {
   width: 100%; }
 
 .big-card-layout {
-  background-color: #f1f1f1;
+  background-color: #F1F1F1;
   text-align: center;
   padding: 0 5em 0 5em; }
 
 .big-card-h1 {
-  color: #1f1f1f;
+  color: #1F1F1F;
   font-size: 2.5em;
   margin-top: 1em; }
 
 .big-card-h3 {
-  color: #1f1f1f;
+  color: #1F1F1F;
   font-size: 2.5em;
   margin-top: 1em; }
 
 .big-card-p {
-  color: #1f1f1f;
+  color: #1F1F1F;
   font-size: 1.5em;
   margin-top: 1em; }
 
@@ -164,13 +169,13 @@ html {
   margin-top: 1em; }
 
 .form-content-div {
-  background-color: #1f1f1f; }
+  background-color: #1F1F1F; }
 
 .form-div {
   display: flex;
   flex-direction: column;
   align-content: center;
-  background-color: #1f1f1f; }
+  background-color: #1F1F1F; }
 
 .stamp {
   transform: rotate(12deg);
@@ -197,7 +202,7 @@ html {
 .vectro {
   position: relative;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 0.1px #f1f1f1;
+  -webkit-text-stroke: 0.1px #F1F1F1;
   font-size: 60px; }
   .vectro-h4 {
     font-size: 20px;
@@ -238,7 +243,7 @@ html {
     margin-left: -20px; }
 
 .windows .vectro {
-  -webkit-text-stroke: 4px #f1f1f1; }
+  -webkit-text-stroke: 4px #F1F1F1; }
 
 .windows .vectro-red {
   padding-right: 30px; }

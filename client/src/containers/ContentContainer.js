@@ -152,7 +152,6 @@ class ContentContainer extends Component {
                 <Route exact path="/"
                     render={
                         () => <HomeContainer
-                            word="Home"
                         />}
                 />
                 <Route exact path="/50s"

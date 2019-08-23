@@ -1,5 +1,5 @@
-$fadedBlack: #1f1f1f;
-$fadedWhite: #f1f1f1;
+$fadedBlack: #1F1F1F;
+$fadedWhite: #F1F1F1;
 $neonRed: #F10C20;
 $neonGreen: #6BFF2B;
 $neonBlue: #3F59F4;
@@ -19,6 +19,10 @@ html {
     background-color: $fadedBlack;
     height: 5em;
     margin-left: 2em;
+
+    &-a {
+        text-decoration: none;
+    }
 
     &-link {
         text-decoration: none;
@@ -128,6 +132,11 @@ html {
     -webkit-text-fill-color: $fadedWhite;
     -webkit-text-stroke: 0;
     -webkit-filter: drop-shadow(5px 5px 5px $neonBlue);
+
+    &:hover {
+        border: 3px solid $neonRed;
+        -webkit-filter: drop-shadow(5px 5px 5px $fadedWhite);
+    }
 
     &-decade-h1 {
         text-align: left;

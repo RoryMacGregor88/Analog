@@ -91,10 +91,18 @@ html {
         width: 15.3em;
         margin-right: 1em;
 
+        &::placeholder {
+            color: $fadedBlack;
+        }
+
         &:focus,
         &:hover {
             background: $fadedBlack;
             color: $fadedWhite;
+
+            &::placeholder {
+                color: $fadedWhite;
+            }
         }   
     }
 }   

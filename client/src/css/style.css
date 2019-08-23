@@ -65,9 +65,13 @@ html {
   background-color: #f1f1f1;
   width: 15.3em;
   margin-right: 1em; }
+  .user-input-search::placeholder {
+    color: #1f1f1f; }
   .user-input-search:focus, .user-input-search:hover {
     background: #1f1f1f;
     color: #f1f1f1; }
+    .user-input-search:focus::placeholder, .user-input-search:hover::placeholder {
+      color: #f1f1f1; }
 
 .card {
   margin: 1em 0 1em 0;

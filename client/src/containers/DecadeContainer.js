@@ -10,6 +10,7 @@ class DecadeContainer extends Component {
         }
     this.reset = this.reset.bind(this);
     this.filterItems = this.filterItems.bind(this);
+    this.createOptions = this.createOptions.bind(this);
     this.handleOptionClick = this.handleOptionClick.bind(this);
     }
 
@@ -22,7 +23,6 @@ class DecadeContainer extends Component {
     }
 
     filterItems(filteredType) {
-
         const filteredItems = this.props.items.filter((item) => {
             return item.type === filteredType;
         })
@@ -38,6 +38,22 @@ class DecadeContainer extends Component {
         this.setState({
             filteredCards: filteredItemsCards
         })
+    }
+
+    createOptions(items) {
+        let itemTypes = [];
+
+        for (let i = 0; i < items.length; i++) {
+            if (!itemTypes.includes(items[i].type)) {
+                itemTypes.push(items[i].type)
+            }
+        }
+
+        const options = itemTypes.map((type) => {
+            return <option key={type}>{type}</option>
+        })
+
+        return options; 
     }
 
     reset() {
@@ -56,11 +72,7 @@ class DecadeContainer extends Component {
                     />
         })
 
-        const options = [...new Set(
-            this.props.items.map((item) => {
-                return <option key={item.id}>{item.type}</option>;
-            })
-        )];
+        const options = this.createOptions(this.props.items);
 
         return ( 
             <div>

@@ -6,10 +6,16 @@ class DecadeContainer extends Component {
         super(props);
         this.state = {
             filter: false,
-            filteredCards: []
+            filteredCards: [],
+            search: false,
+            searchTerm: "",
+            searchedCards: []
         }
-    this.reset = this.reset.bind(this);
+    this.search = this.search.bind(this);
+    this.resetFilter = this.resetFilter.bind(this);
+    this.resetSearch = this.resetSearch.bind(this);
     this.filterItems = this.filterItems.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
     this.createOptions = this.createOptions.bind(this);
     this.handleOptionClick = this.handleOptionClick.bind(this);
     }
@@ -21,6 +27,45 @@ class DecadeContainer extends Component {
             filter: !this.state.filter
         })
     }
+
+    handleSearch(evt) {
+        this.setState({
+            searchTerm: evt.target.value
+        })
+    }
+
+    search() {
+        const items = this.props.items;
+        const term = this.state.searchTerm;
+        let searchedItems = [];
+
+        for (let i = 0; i < items.length; i++) {
+            if (
+                items[i].year.toString().includes(term)
+                ||
+                items[i].brand.toLowerCase().includes(term)
+                ||
+                items[i].model.toLowerCase().includes(term)
+                ||
+                items[i].description.toLowerCase().includes(term)
+            ) {
+                searchedItems.push(items[i])
+            }
+        }
+
+        let searchedCards = searchedItems.map((item) => {
+            return <Card
+                item={item}
+                key={item.id}
+                displayFunction={this.props.displayFunction}
+            />
+        })
+
+        this.setState({
+            searchedCards: searchedCards,
+            search: true
+        })
+    }   
 
     filterItems(filteredType) {
         const filteredItems = this.props.items.filter((item) => {
@@ -56,7 +101,13 @@ class DecadeContainer extends Component {
         return options; 
     }
 
-    reset() {
+    resetSearch() {
+        this.setState({
+            search: false
+        })
+    }
+
+    resetFilter() {
         this.setState({
             filter: false
         })
@@ -82,8 +133,9 @@ class DecadeContainer extends Component {
                     <button className="user-input-btn post" onClick={this.props.itemForm}>post an ad</button>
 
                     <div className="user-input-search-div">
-                        <input className="user-input-search" type="search" id="search" placeholder="search..."></input>
-                        <button className="user-input-btn" htmlFor="search">search</button>
+                        <input onChange={this.handleSearch} className="user-input-search" type="search" id="search" placeholder="search..."></input>
+                        <button className="user-input-btn" onClick={this.search} htmlFor="search">search</button>
+                        <button className="user-input-btn" onClick={this.resetSearch} htmlFor="search">clear search</button>
                     </div>
 
                     <div className="user-input-filter">
@@ -91,7 +143,7 @@ class DecadeContainer extends Component {
                             <option defaultValue>filter by type</option>
                             {options}
                         </select>
-                        <button className="user-input-btn" onClick={this.reset}>reset filter</button>
+                        <button className="user-input-btn" onClick={this.resetFilter}>reset filter</button>
                     </div>
 
                 </div>
@@ -99,7 +151,13 @@ class DecadeContainer extends Component {
                 <h1 className="card-decade-h1">{this.props.decade}</h1>
 
                 <div className="card-div">
-                    {this.state.filter ? this.state.filteredCards : cards} 
+                    {
+                        this.state.filter ? this.state.filteredCards 
+                        :
+                        this.state.search ? this.state.searchedCards
+                        :
+                        cards
+                    } 
                 </div>
             </div>
          );

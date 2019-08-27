@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class HomeContainer extends Component {
+class LandingPage extends Component {
     constructor(props) {
         super(props);
         this.state = {  }
@@ -19,4 +19,4 @@ class HomeContainer extends Component {
     }
 }
  
-export default HomeContainer;
+export default LandingPage;

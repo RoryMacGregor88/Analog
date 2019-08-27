@@ -35,7 +35,7 @@ html {
     font-size: 4em;
     animation-name: title-fade-in;
     animation-duration: 2.5s;
-    animation-timing-function: ease-in-out; }
+    animation-timing-function: linear; }
 
 .user-input-div {
   display: flex;
@@ -150,12 +150,18 @@ html {
   object-fit: cover;
   text-align: left;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  border-radius: 2.5px;
+  border-bottom: 2.5px solid #F1F1F1;
+  border-right: 2.5px solid #F1F1F1; }
 
 .big-card-layout {
   background-color: #1F1F1F;
   text-align: center;
-  padding: 0 5em 0 5em; }
+  padding: 0 5em 0 5em;
+  border-radius: 2.5px;
+  border-top: 2.5px solid #F1F1F1;
+  border-left: 2.5px solid #F1F1F1; }
 
 .big-card-h1 {
   color: #F1F1F1;
@@ -197,7 +203,8 @@ html {
     border: 2px solid #1F1F1F; }
 
 .form-component {
-  background-color: #1F1F1F; }
+  background-color: #1F1F1F;
+  margin-top: 3em; }
 
 .form-content-div {
   display: flex;
@@ -265,8 +272,8 @@ html {
   mix-blend-mode: multiply; }
 
 .sold {
-  color: #D23;
-  border: 0.5rem double #D23;
+  color: #F10C20;
+  border: 0.5rem double #F10C20;
   transform: rotate(8deg);
   -webkit-mask-position: 2rem 3rem;
   font-size: 2rem; }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Switch } from "react-router-dom";
 import DecadeContainer from "./DecadeContainer";
-import HomeContainer from "./HomeContainer";
+import LandingPage from "../components/LandingPage";
 import BigCard from "../components/BigCard";
 import ItemForm from "../components/ItemForm";
 
@@ -151,7 +151,7 @@ class ContentContainer extends Component {
             <Switch>
                 <Route exact path="/"
                     render={
-                        () => <HomeContainer
+                        () => <LandingPage
                         />}
                 />
                 <Route exact path="/50s"

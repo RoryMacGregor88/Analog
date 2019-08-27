@@ -76,7 +76,7 @@ class ItemForm extends Component {
         return ( 
             <div className="form-component">
             
-                <h1 className="form-h1">post item</h1>
+                <h1 className="form-h1">POST ITEM</h1>
 
                 <div className="form-content-div">
                     <form className="form-div" onSubmit={this.handleSubmit}>

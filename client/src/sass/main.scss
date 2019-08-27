@@ -53,7 +53,7 @@ html {
         font-size: 4em;
         animation-name: title-fade-in;
         animation-duration: 2.5s;
-        animation-timing-function: ease-in-out;
+        animation-timing-function: linear;
     }
 }
 
@@ -216,12 +216,18 @@ html {
         text-align: left;
         height: 100%;
         width: 100%;
+        border-radius: 2.5px;
+        border-bottom: 2.5px solid $fadedWhite;
+        border-right: 2.5px solid $fadedWhite;
     }
 
     &-layout {
         background-color: $fadedBlack;
         text-align: center;
         padding: 0 5em 0 5em;
+        border-radius: 2.5px;
+        border-top: 2.5px solid $fadedWhite;
+        border-left: 2.5px solid $fadedWhite;
     }
 
     &-h1 {
@@ -276,6 +282,7 @@ html {
 
     &-component {
         background-color: $fadedBlack;
+        margin-top: 3em;
     }
 
     &-content-div {
@@ -362,8 +369,8 @@ html {
 }
 
 .sold {
-    color: #D23;
-    border: 0.5rem double #D23;
+    color: $neonRed;
+    border: 0.5rem double $neonRed;
     transform: rotate(8deg);
     -webkit-mask-position: 2rem 3rem;
     font-size: 2rem;  

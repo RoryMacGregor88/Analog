@@ -164,7 +164,7 @@ class ItemForm extends Component {
                 </div>
 
                 <div className="form-btn-div">
-                    <button className="form-btn" onClick={goBack}>go back</button>
+                    <button className="form-btn" onClick={goBack}>back</button>
                 </div>
 
             </div>

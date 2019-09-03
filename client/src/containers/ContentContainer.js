@@ -15,20 +15,23 @@ class ContentContainer extends Component {
             selectedItem: null,
             items: []
          }
+    this.goBack = this.goBack.bind(this);
     this.bigCard = this.bigCard.bind(this);
+    this.getItems = this.getItems.bind(this);
     this.itemForm = this.itemForm.bind(this);
     this.sellItem = this.sellItem.bind(this);
     this.postNewItem = this.postNewItem.bind(this);
     this.splitDecades = this.splitDecades.bind(this);
     this.createItemObject = this.createItemObject.bind(this);
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
-    this.handleFormBackClick = this.handleFormBackClick.bind(this);
-    this.handleBigCardBackClick = this.handleBigCardBackClick.bind(this);
     }
 
-    componentDidMount() {
-        const url = "http://localhost:8080/items";
+    async componentDidMount() {
+        await this.getItems();
+    }
 
+    getItems() {
+        const url = "http://localhost:8080/items";
         fetch(url)
             .then(res => res.json())
             .then((data) => {
@@ -111,16 +114,9 @@ class ContentContainer extends Component {
             .catch(err => console.log(err));
     }
 
-
-    handleBigCardBackClick() {
-        this.setState({ 
-            bigCard: !this.state.bigCard
-        })
-    }
-
-    handleFormBackClick() {
+    goBack(evt) {
         this.setState({
-            itemForm: !this.state.itemForm
+            [evt.target.name]: false
         })
     }
 
@@ -136,13 +132,13 @@ class ContentContainer extends Component {
                     item={item}
                     sold={sold}
                     sellItem={this.sellItem}
-                    goBack={this.handleBigCardBackClick}
+                    goBack={this.goBack}
                 />
             )
         } else if (this.state.itemForm) {
             return (
                 <ItemForm 
-                    goBack={this.handleFormBackClick}
+                    goBack={this.goBack}
                     handleFormSubmit={this.handleFormSubmit}
                 />
             )

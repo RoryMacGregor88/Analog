@@ -25,7 +25,7 @@ class BigCard extends Component {
                     <div className="big-card-btn-wrapper">
                         <div className="big-card-btn-div">
                             <button className="big-card-btn" onClick={sellItem.bind(this)}>buy now</button>
-                            <button className="big-card-btn" onClick={goBack.bind(this)}>back</button>
+                            <button className="big-card-btn" name="bigCard" onClick={goBack.bind(this)}>back</button>
                         </div>
                     </div>
 

@@ -74,8 +74,7 @@ class ItemForm extends Component {
         ]
 
         return ( 
-            <div className="form-component">
-            
+            <div className="form-component">            
                 <h1 className="form-h1">POST ITEM</h1>
 
                 <div className="form-content-div">
@@ -164,7 +163,7 @@ class ItemForm extends Component {
                 </div>
 
                 <div className="form-btn-div">
-                    <button className="form-btn" onClick={goBack}>back</button>
+                    <button name="itemForm" className="form-btn" onClick={goBack}>back</button>
                 </div>
 
             </div>
